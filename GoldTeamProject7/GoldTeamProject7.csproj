@@ -193,6 +193,10 @@
     <Compile Include="Migrations\201504301701587_productuser.Designer.cs">
       <DependentUpon>201504301701587_productuser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504301744337_addsellid.cs" />
+    <Compile Include="Migrations\201504301744337_addsellid.Designer.cs">
+      <DependentUpon>201504301744337_addsellid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -286,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504301701587_productuser.resx">
       <DependentUpon>201504301701587_productuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504301744337_addsellid.resx">
+      <DependentUpon>201504301744337_addsellid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

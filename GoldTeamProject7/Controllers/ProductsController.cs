@@ -46,7 +46,7 @@ namespace GoldTeamProject7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category")] Product product)
+        public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,SellerID")] Product product)
         {
             if (ModelState.IsValid)
             {

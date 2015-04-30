@@ -1,11 +1,11 @@
 ﻿@model GoldTeamProject7.Models.Product
+@using Microsoft.AspNet.Identity
 
 @{
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
+@User.Identity.GetUserId()
 
 @using (Html.BeginForm()) 
 {
@@ -64,6 +64,9 @@
                 @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        @Html.EditorFor(model => model.SellerID, new { htmlAttributes = new { @value = User.Identity.GetUserId() } })
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
