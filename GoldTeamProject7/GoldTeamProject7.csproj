@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201504301753596_fixproductuserid.Designer.cs">
       <DependentUpon>201504301753596_fixproductuserid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504302006029_refactorrelationship.cs" />
+    <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
+      <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -300,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504301753596_fixproductuserid.resx">
       <DependentUpon>201504301753596_fixproductuserid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
+      <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

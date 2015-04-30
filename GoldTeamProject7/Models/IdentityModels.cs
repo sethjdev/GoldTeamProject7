@@ -13,8 +13,6 @@ namespace GoldTeamProject7.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Zipcode { get; set; }
-
-        public virtual ICollection<Product> Product { get; set; }
  
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
