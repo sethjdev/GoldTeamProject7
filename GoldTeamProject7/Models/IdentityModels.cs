@@ -36,5 +36,7 @@ namespace GoldTeamProject7.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<GoldTeamProject7.Models.Product> Products { get; set; }
     }
 }
