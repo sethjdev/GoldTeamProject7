@@ -13,7 +13,7 @@ namespace GoldTeamProject7.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public string Title { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         public string Photo { get; set; }
         public string Description { get; set; }
         public bool Availability { get; set; }
