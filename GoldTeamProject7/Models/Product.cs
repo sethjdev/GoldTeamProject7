@@ -18,7 +18,6 @@ namespace GoldTeamProject7.Models
         public string Description { get; set; }
         public bool Availability { get; set; }
         public string Category { get; set; }
-        public string SellerID { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
 
