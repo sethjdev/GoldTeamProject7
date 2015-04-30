@@ -5,6 +5,17 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldTeamProject7", "GoldTeamProject7\GoldTeamProject7.csproj", "{A91444FC-2F20-44E2-A8B4-30C5ED095AB6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{867E467A-F45C-489C-A0C0-FF979FE686BA}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{582D7C7D-2471-4383-AFB6-0141DE1C09F5}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\GoldTeamProject7-WAWS-dev.json = PublishScripts\Configurations\GoldTeamProject7-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{582D7C7D-2471-4383-AFB6-0141DE1C09F5} = {867E467A-F45C-489C-A0C0-FF979FE686BA}
 	EndGlobalSection
 EndGlobal
