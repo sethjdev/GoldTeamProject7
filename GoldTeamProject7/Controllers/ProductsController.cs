@@ -7,6 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GoldTeamProject7.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Globalization;
 
 namespace GoldTeamProject7.Controllers
 {
@@ -46,11 +52,13 @@ namespace GoldTeamProject7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,SellerID")] Product product)
+        public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,ApplicationUserID")] Product product)
         {
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
+                var userID = User.Identity.GetUserId();
+                product.ApplicationUserID = userID;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
