@@ -205,9 +205,9 @@
     <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504302035123_pricetodecimal.cs" />
-    <Compile Include="Migrations\201504302035123_pricetodecimal.Designer.cs">
-      <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
+    <Compile Include="Migrations\201505011337424_FileUpload.cs" />
+    <Compile Include="Migrations\201505011337424_FileUpload.Designer.cs">
+      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -312,8 +312,8 @@
     <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504302035123_pricetodecimal.resx">
-      <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505011337424_FileUpload.resx">
+      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

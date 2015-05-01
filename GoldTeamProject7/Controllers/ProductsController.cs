@@ -13,6 +13,7 @@ using Microsoft.Owin.Security;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.IO;
 
 namespace GoldTeamProject7.Controllers
 {
@@ -52,6 +53,26 @@ namespace GoldTeamProject7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+        public ActionResult FileUpload(HttpPostedFileBase file)
+        {
+            if (file != null)
+            {
+                string pic = System.IO.Path.GetFileName(file.FileName);
+                string path = System.IO.Path.Combine(Server.MapPath("~/images/profile"), pic);
+
+                //file is uploaded
+                file.SaveAs(path);
+            }
+            using (MemoryStream ms = new MemoryStream())
+            {
+                file.InputStream.CopyTo(ms);
+                byte[] array = ms.GetBuffer();
+            }
+
+            return RedirectToAction("actionname", "controller name");
+        }
+
         public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,ApplicationUserID")] Product product)
         {
             if (ModelState.IsValid)
