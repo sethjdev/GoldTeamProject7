@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -59,16 +60,18 @@ namespace GoldTeamProject7.Controllers
             if (file!= null)
             {
                 string pic = System.IO.Path.GetFileName(file.FileName);
-                string path = System.IO.Path.Combine(Server.MapPath("C:/VisualStudio2013/projects/GoldTeamPRoject7/Images"), pic);
+                string fname = Guid.NewGuid().ToString("ApplicationUserId") + "png";
+                string Redircturl=ConfigurationManager.AppSettings["RedirectUrl"].ToString();
+                //string path = System.IO.Path.Combine(Server.MapPath("C:/VisualStudio2013/projects/GoldTeamPRoject7/Images"), pic);            
 
                 //file is uploaded
-                file.SaveAs("C:/VisualStudio2013/projects/GoldTeamPRoject7/Images");
+                file.SaveAs(fname);
             }
-            using (MemoryStream ms = new MemoryStream())
-            {
-                file.InputStream.CopyTo(ms);
-                byte[] array = ms.GetBuffer();
-            }
+            //using (MemoryStream ms = new MemoryStream())
+            //{
+            //    file.InputStream.CopyTo(ms);
+            //    byte[] array = ms.GetBuffer();
+            //}
 
             return RedirectToAction("Index");
         }
