@@ -218,6 +218,14 @@
     <Compile Include="Migrations\201505011551401_MessagesDefaultDateSent.Designer.cs">
       <DependentUpon>201505011551401_MessagesDefaultDateSent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505011941141_MessageNullable.cs" />
+    <Compile Include="Migrations\201505011941141_MessageNullable.Designer.cs">
+      <DependentUpon>201505011941141_MessageNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.cs" />
+    <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.Designer.cs">
+      <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -335,6 +343,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505011551401_MessagesDefaultDateSent.resx">
       <DependentUpon>201505011551401_MessagesDefaultDateSent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505011941141_MessageNullable.resx">
+      <DependentUpon>201505011941141_MessageNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505011947592_MakeDateSentNotNull.resx">
+      <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

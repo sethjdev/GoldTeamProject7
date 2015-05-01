@@ -9,7 +9,7 @@ namespace GoldTeamProject7.Models
     {
         public int ID { get; set; }        
         public string Message { get; set; }
-        public DateTime DateSent { get; set; }
+        public DateTime? DateSent { get; set; }
         public int TransactionID { get; set; }
 
     }

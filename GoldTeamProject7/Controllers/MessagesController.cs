@@ -51,6 +51,7 @@ namespace GoldTeamProject7.Controllers
         {
             if (ModelState.IsValid)
             {
+                messages.DateSent = DateTime.Now;
                 db.Messages.Add(messages);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -83,6 +84,7 @@ namespace GoldTeamProject7.Controllers
         {
             if (ModelState.IsValid)
             {
+                messages.DateSent = DateTime.Now;
                 db.Entry(messages).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
