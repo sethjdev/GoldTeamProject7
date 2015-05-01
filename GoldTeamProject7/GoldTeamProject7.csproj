@@ -205,9 +205,9 @@
     <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505011415423_FileUpload.cs" />
-    <Compile Include="Migrations\201505011415423_FileUpload.Designer.cs">
-      <DependentUpon>201505011415423_FileUpload.cs</DependentUpon>
+    <Compile Include="Migrations\201505011337424_FileUpload.cs" />
+    <Compile Include="Migrations\201505011337424_FileUpload.Designer.cs">
+      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -282,6 +282,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -312,8 +313,8 @@
     <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011415423_FileUpload.resx">
-      <DependentUpon>201505011415423_FileUpload.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505011337424_FileUpload.resx">
+      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

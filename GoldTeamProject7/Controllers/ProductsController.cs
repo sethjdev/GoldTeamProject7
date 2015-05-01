@@ -56,13 +56,13 @@ namespace GoldTeamProject7.Controllers
 
         public ActionResult FileUpload(HttpPostedFileBase file)
         {
-            if (file != null)
+            if (file!= null)
             {
                 string pic = System.IO.Path.GetFileName(file.FileName);
-                string path = System.IO.Path.Combine(Server.MapPath("~/images/profile"), pic);
+                string path = System.IO.Path.Combine(Server.MapPath("C:/VisualStudio2013/projects/GoldTeamPRoject7/Images"), pic);
 
                 //file is uploaded
-                file.SaveAs(path);
+                file.SaveAs("C:/VisualStudio2013/projects/GoldTeamPRoject7/Images");
             }
             using (MemoryStream ms = new MemoryStream())
             {
