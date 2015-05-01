@@ -5,23 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-         <div id="navigation-bar">
-             <div class="row">
-                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div id="navigation-bar">
+        <div class="row">
+            <div class="columns large-3">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="columns large-5">
+                <div class="nav-search">
+                    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+                    {
+                        <input id="SearchString" name="SearchString" type="text" placeholder="Search Listings:" />
+                        <button type="submit">
+                            <span class="fa fa-search fa-2x"></span>
+                        </button>
+                    }
+                </div>
+            </div>
+            <div class="columns large-4"
                  @Html.Partial("_LoginPartial")
-             </div>
-         </div>
+            </div>
+        </div>
         <div class="container body-content">
             @RenderBody()
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
 </body>
 </html>
