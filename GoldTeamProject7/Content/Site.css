@@ -9,7 +9,7 @@
 
 
 /*===================================
-    HOMEPAGE
+    NAVIGATION
 =====================================*/
 
 body p,
@@ -32,20 +32,20 @@ body a {
      background-size: 87%;
      display: block;
      width: 250px;
-     height: 150px;
+     height: 100px;
      text-indent: -9999px; /* hides the link text */
      clear: none;
 }
 
 .nav li {
-    float: right;
+    float: left;
     clear: none;
 }
 
 .nav-search input[type=text] {
     width: 295px;
     height: 45px;
-    margin: 30px 0 auto 0;
+    margin: 25px 0 auto 0;
     background-color: #f0f0f0;
     border: 1px solid #c1c1c1;
     border-right: none;
@@ -58,7 +58,7 @@ body a {
 .nav-search button {
     height: 45px;
     padding: 5px;
-    margin: 30px 0 auto 0;
+    margin: 25px 0 auto 0;
     padding-right: 10px;
     background-color: #f0f0f0;
     float: left;
@@ -70,7 +70,8 @@ body a {
 }
 
 #registerLink,
-#loginLink {
+#loginLink,
+.logOffbutton {
     float: left;
     display: inline-block;
     padding: 15px;
@@ -91,17 +92,42 @@ body a {
 }
 
     #registerLink:hover,
-    #loginLink:hover {
+    #loginLink:hover,
+    .logOffbutton:hover {
         box-shadow: 0px 1px 0px #f0f0f0;
         opacity: .7;   
     }
 
-#loginLink {
+#loginLink,
+.logOffbutton {
     background-color: #515151;
 }
 
-#registerLink {
+#registerLink
+{
     background-color: #00b4ff;
+}
+
+#welcome-message {
+    float: left;
+    font-size: .8em;
+    font-weight: bold;
+    color: #515151;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    margin-right: 0px;
+}
+
+
+/*===================================
+    HOMEPAGE
+=====================================*/
+
+.main-jumbotron {
+    height: 500px;
+    background-color: #515151;
+    width: 100%
 }
 
 
