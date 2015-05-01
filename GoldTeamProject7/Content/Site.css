@@ -72,11 +72,12 @@ body a {
 #registerLink,
 #loginLink {
     float: left;
+    display: inline-block;
     padding: 15px;
     margin-right: 10px;
-    width: 130px;
+    width: 120px;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 5px;
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
