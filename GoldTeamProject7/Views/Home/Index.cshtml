@@ -1,3 +1,15 @@
-﻿@{
+﻿@model IEnumerable<GoldTeamProject7.Models.Product>
+
+@{
     ViewBag.Title = "Home Page";
+}
+
+<div class="main-jumbotron">
+
+</div>
+
+@foreach (var item in Model)
+{
+    @Html.DisplayNameFor(model => model.Title)
+    @Html.DisplayFor(modelItem => item.Title)
 }
