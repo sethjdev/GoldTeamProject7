@@ -207,25 +207,9 @@
     <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505011337424_FileUpload.cs" />
-    <Compile Include="Migrations\201505011337424_FileUpload.Designer.cs">
-      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505011432093_messagestable.cs" />
-    <Compile Include="Migrations\201505011432093_messagestable.Designer.cs">
-      <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505011551401_MessagesDefaultDateSent.cs" />
-    <Compile Include="Migrations\201505011551401_MessagesDefaultDateSent.Designer.cs">
-      <DependentUpon>201505011551401_MessagesDefaultDateSent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505011941141_MessageNullable.cs" />
-    <Compile Include="Migrations\201505011941141_MessageNullable.Designer.cs">
-      <DependentUpon>201505011941141_MessageNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.cs" />
-    <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.Designer.cs">
-      <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
+    <Compile Include="Migrations\201505012122152_nicksethmerge.cs" />
+    <Compile Include="Migrations\201505012122152_nicksethmerge.Designer.cs">
+      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -362,20 +346,8 @@
     <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011337424_FileUpload.resx">
-      <DependentUpon>201505011337424_FileUpload.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011432093_messagestable.resx">
-      <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011551401_MessagesDefaultDateSent.resx">
-      <DependentUpon>201505011551401_MessagesDefaultDateSent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011941141_MessageNullable.resx">
-      <DependentUpon>201505011941141_MessageNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505011947592_MakeDateSentNotNull.resx">
-      <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505012122152_nicksethmerge.resx">
+      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

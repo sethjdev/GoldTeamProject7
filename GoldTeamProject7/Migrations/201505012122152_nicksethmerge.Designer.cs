@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class messagestable : IMigrationMetadata
+    public sealed partial class nicksethmerge : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(messagestable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(nicksethmerge));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505011432093_messagestable"; }
+            get { return "201505012122152_nicksethmerge"; }
         }
         
         string IMigrationMetadata.Source
