@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201504302035123_pricetodecimal.Designer.cs">
       <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505011432093_messagestable.cs" />
+    <Compile Include="Migrations\201505011432093_messagestable.Designer.cs">
+      <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504302035123_pricetodecimal.resx">
       <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505011432093_messagestable.resx">
+      <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
