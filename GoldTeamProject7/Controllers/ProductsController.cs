@@ -70,7 +70,7 @@ namespace GoldTeamProject7.Controllers
                 byte[] array = ms.GetBuffer();
             }
 
-            return RedirectToAction("actionname", "controller name");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,ApplicationUserID")] Product product)
