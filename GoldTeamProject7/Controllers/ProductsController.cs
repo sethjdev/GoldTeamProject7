@@ -69,19 +69,8 @@ namespace GoldTeamProject7.Controllers
 
             }
             // after successfully uploading redirect the user
-            return RedirectToAction("actionname", "controller name");
+            return RedirectToAction("Index");
         }
-
-
-
-
-
-
-
-
-
-
-
 
         public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,SellerID")] Product product)
         {
