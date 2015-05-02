@@ -7,9 +7,17 @@
 <div class="main-jumbotron">
 
 </div>
-
-@foreach (var item in Model)
-{
-    @Html.DisplayNameFor(model => model.Title)
-    @Html.DisplayFor(modelItem => item.Title)
-}
+<div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="large-3 columns">
+                <div class="product-card">
+                    <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
+                        <img src="@Html.DisplayFor(modelItem => item.Photo)" />
+                        @Html.DisplayFor(modelItem => item.Title)
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </a>
+                </div>
+            </div>
+        }  
+</div>

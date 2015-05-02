@@ -132,6 +132,15 @@ body a {
     width: 100%
 }
 
+.product-card {
+    height: 300px;
+    border: 1px solid #515151;
+    border-radius: 5px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+
 
 
 
