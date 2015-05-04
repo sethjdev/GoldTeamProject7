@@ -11,6 +11,7 @@ namespace GoldTeamProject7.Models
         public string Message { get; set; }
         public DateTime? DateSent { get; set; }
         public int TransactionID { get; set; }
+        public virtual Transaction Transaction { get; set; }
 
     }
 }
