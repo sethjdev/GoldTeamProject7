@@ -7,12 +7,20 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using GoldTeamProject7.Models;
+using System.IO;
+using System.Drawing;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Net;
 
 namespace GoldTeamProject7.Controllers
 {
     [Authorize]
     public class ManageController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -52,6 +60,8 @@ namespace GoldTeamProject7.Controllers
 
         //
         // GET: /Manage/Index
+
+
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -70,8 +80,12 @@ namespace GoldTeamProject7.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                ProfileImage = (from m in db.Users
+                                where m.Id == userId
+                               select m.ProfileImage).FirstOrDefault()
             };
+
             return View(model);
         }
 

@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using GoldTeamProject7.Models;
 using System.IO;
+using System.Collections.Generic;
+using System.Net;
 
 namespace GoldTeamProject7.Controllers
 {

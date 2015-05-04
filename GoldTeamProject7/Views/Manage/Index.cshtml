@@ -8,6 +8,7 @@
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
     <h4>Change your account settings</h4>
+    <img src="data:image;base64,@Convert.ToBase64String(Model.ProfileImage)" />
     <hr />
     <dl class="dl-horizontal">
         <dt>Password:</dt>
