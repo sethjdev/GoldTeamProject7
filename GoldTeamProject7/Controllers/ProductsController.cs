@@ -51,29 +51,29 @@ namespace GoldTeamProject7.Controllers
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult FileUpload(HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "ID,Title,Price,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
         {
-
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Create([Bind(Include = "ID,Title,Price,MainPhoto,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
-        {
-            using (var ms = new MemoryStream())
-            {
-                ImageFile.InputStream.CopyTo(ms);
-                product.MainPhoto = ms.ToArray();
-            }
-
-
+            
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
                 var userID = User.Identity.GetUserId();
                 product.ApplicationUserID = userID;
+
+                using (var ms = new MemoryStream())
+                {
+                    if (ImageFile != null)
+                    {
+                        ImageFile.InputStream.CopyTo(ms);
+                        product.MainPhoto = ms.ToArray();
+                    }
+                }
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
