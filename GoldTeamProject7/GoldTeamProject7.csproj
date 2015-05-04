@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201505020020297_fridaymerch2.Designer.cs">
       <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505041501489_userphoto.cs" />
+    <Compile Include="Migrations\201505041501489_userphoto.Designer.cs">
+      <DependentUpon>201505041501489_userphoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -232,7 +236,9 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Readme\Foundation for Sites\readme.md" />
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505020020297_fridaymerch2.resx">
       <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505041501489_userphoto.resx">
+      <DependentUpon>201505041501489_userphoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
