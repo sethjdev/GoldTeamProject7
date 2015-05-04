@@ -14,8 +14,8 @@
                 <div class="product-card">
                     <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
                         <img src="@Html.DisplayFor(modelItem => item.Photo)" />
-                        @Html.DisplayFor(modelItem => item.Title)
-                        @Html.DisplayFor(modelItem => item.Price)
+                        <p>@Html.DisplayFor(modelItem => item.Title)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Price)</p>
                     </a>
                 </div>
             </div>
