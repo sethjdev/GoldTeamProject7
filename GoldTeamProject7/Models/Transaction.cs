@@ -12,6 +12,7 @@ namespace GoldTeamProject7.Models
         public DateTime? Created { get; set; }
         public int BuyerID { get; set; }
         public int ProductID { get; set; }
-
+        public virtual Product Product { get; set; }
+        public virtual Messages Messages { get; set; }
     }
 }

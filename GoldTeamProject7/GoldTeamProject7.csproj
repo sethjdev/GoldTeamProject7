@@ -176,6 +176,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,14 +208,6 @@
     <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505012122152_nicksethmerge.cs" />
-    <Compile Include="Migrations\201505012122152_nicksethmerge.Designer.cs">
-      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505020020297_fridaymerch2.cs" />
-    <Compile Include="Migrations\201505020020297_fridaymerch2.Designer.cs">
-      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201505011432093_messagestable.cs" />
     <Compile Include="Migrations\201505011432093_messagestable.Designer.cs">
       <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
@@ -231,12 +224,17 @@
     <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.Designer.cs">
       <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505041506517_transactions.cs" />
+    <Compile Include="Migrations\201505041506517_transactions.Designer.cs">
+      <DependentUpon>201505041506517_transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Messages.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -333,6 +331,11 @@
     <Content Include="Views\Messages\Details.cshtml" />
     <Content Include="Views\Messages\Edit.cshtml" />
     <Content Include="Views\Messages\Index.cshtml" />
+    <Content Include="Views\Transactions\Create.cshtml" />
+    <Content Include="Views\Transactions\Delete.cshtml" />
+    <Content Include="Views\Transactions\Details.cshtml" />
+    <Content Include="Views\Transactions\Edit.cshtml" />
+    <Content Include="Views\Transactions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -366,12 +369,6 @@
     <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505012122152_nicksethmerge.resx">
-      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505020020297_fridaymerch2.resx">
-      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505011432093_messagestable.resx">
       <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505011947592_MakeDateSentNotNull.resx">
       <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505041506517_transactions.resx">
+      <DependentUpon>201505041506517_transactions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
