@@ -67,7 +67,7 @@ namespace GoldTeamProject7.Controllers
 
                 using (var ms = new MemoryStream())
                 {
-                    if (ImageFile != null)
+                    
                     {
                         ImageFile.InputStream.CopyTo(ms);
                         product.MainPhoto = ms.ToArray();
