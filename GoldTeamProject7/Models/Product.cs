@@ -14,7 +14,7 @@ namespace GoldTeamProject7.Models
         public int ID { get; set; }
         public string Title { get; set; }
         public decimal Price { get; set; }
-        public string Photo { get; set; }
+        public byte[] MainPhoto { get; set; }
         public string Description { get; set; }
         public bool Availability { get; set; }
         public string Category { get; set; }

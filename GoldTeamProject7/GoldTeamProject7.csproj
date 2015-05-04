@@ -179,41 +179,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504301648410_init.cs" />
-    <Compile Include="Migrations\201504301648410_init.Designer.cs">
-      <DependentUpon>201504301648410_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504301659187_productuseridkey.cs" />
-    <Compile Include="Migrations\201504301659187_productuseridkey.Designer.cs">
-      <DependentUpon>201504301659187_productuseridkey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504301700442_productkeyupdate.cs" />
-    <Compile Include="Migrations\201504301700442_productkeyupdate.Designer.cs">
-      <DependentUpon>201504301700442_productkeyupdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504301701587_productuser.cs" />
-    <Compile Include="Migrations\201504301701587_productuser.Designer.cs">
-      <DependentUpon>201504301701587_productuser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504301744337_addsellid.cs" />
-    <Compile Include="Migrations\201504301744337_addsellid.Designer.cs">
-      <DependentUpon>201504301744337_addsellid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504301753596_fixproductuserid.cs" />
-    <Compile Include="Migrations\201504301753596_fixproductuserid.Designer.cs">
-      <DependentUpon>201504301753596_fixproductuserid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504302006029_refactorrelationship.cs" />
-    <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
-      <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505012122152_nicksethmerge.cs" />
-    <Compile Include="Migrations\201505012122152_nicksethmerge.Designer.cs">
-      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505020020297_fridaymerch2.cs" />
-    <Compile Include="Migrations\201505020020297_fridaymerch2.Designer.cs">
-      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
+    <Compile Include="Migrations\201505041903432_UpdatePhotoProp.cs" />
+    <Compile Include="Migrations\201505041903432_UpdatePhotoProp.Designer.cs">
+      <DependentUpon>201505041903432_UpdatePhotoProp.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -329,32 +297,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504301648410_init.resx">
-      <DependentUpon>201504301648410_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504301659187_productuseridkey.resx">
-      <DependentUpon>201504301659187_productuseridkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504301700442_productkeyupdate.resx">
-      <DependentUpon>201504301700442_productkeyupdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504301701587_productuser.resx">
-      <DependentUpon>201504301701587_productuser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504301744337_addsellid.resx">
-      <DependentUpon>201504301744337_addsellid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504301753596_fixproductuserid.resx">
-      <DependentUpon>201504301753596_fixproductuserid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
-      <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505012122152_nicksethmerge.resx">
-      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505020020297_fridaymerch2.resx">
-      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505041903432_UpdatePhotoProp.resx">
+      <DependentUpon>201505041903432_UpdatePhotoProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

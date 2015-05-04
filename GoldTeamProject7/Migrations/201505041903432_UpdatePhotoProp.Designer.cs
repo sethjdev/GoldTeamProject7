@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class productuser : IMigrationMetadata
+    public sealed partial class UpdatePhotoProp : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(productuser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdatePhotoProp));
         
         string IMigrationMetadata.Id
         {
-            get { return "201504301701587_productuser"; }
+            get { return "201505041903432_UpdatePhotoProp"; }
         }
         
         string IMigrationMetadata.Source
