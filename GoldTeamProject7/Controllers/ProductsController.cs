@@ -60,8 +60,15 @@ namespace GoldTeamProject7.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Create([Bind(Include = "ID,Title,Price,MainPhoto,Description,Availability,Category,ApplicationUserID")] Product product)
+        public ActionResult Create([Bind(Include = "ID,Title,Price,MainPhoto,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
         {
+            using (var ms = new MemoryStream())
+            {
+                ImageFile.InputStream.CopyTo(ms);
+                product.MainPhoto = ms.ToArray();
+            }
+
+
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
