@@ -224,13 +224,17 @@
     <Compile Include="Migrations\201505011947592_MakeDateSentNotNull.Designer.cs">
       <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505041506517_transactions.cs" />
-    <Compile Include="Migrations\201505041506517_transactions.Designer.cs">
-      <DependentUpon>201505041506517_transactions.cs</DependentUpon>
+    <Compile Include="Migrations\201505041558569_transaction.cs" />
+    <Compile Include="Migrations\201505041558569_transaction.Designer.cs">
+      <DependentUpon>201505041558569_transaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505041512535_Transaction2.cs" />
-    <Compile Include="Migrations\201505041512535_Transaction2.Designer.cs">
-      <DependentUpon>201505041512535_Transaction2.cs</DependentUpon>
+    <Compile Include="Migrations\201505041727498_transactiontime.cs" />
+    <Compile Include="Migrations\201505041727498_transactiontime.Designer.cs">
+      <DependentUpon>201505041727498_transactiontime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505041734182_MessagesTime.cs" />
+    <Compile Include="Migrations\201505041734182_MessagesTime.Designer.cs">
+      <DependentUpon>201505041734182_MessagesTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -385,11 +389,14 @@
     <EmbeddedResource Include="Migrations\201505011947592_MakeDateSentNotNull.resx">
       <DependentUpon>201505011947592_MakeDateSentNotNull.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505041506517_transactions.resx">
-      <DependentUpon>201505041506517_transactions.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505041558569_transaction.resx">
+      <DependentUpon>201505041558569_transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505041512535_Transaction2.resx">
-      <DependentUpon>201505041512535_Transaction2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505041727498_transactiontime.resx">
+      <DependentUpon>201505041727498_transactiontime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505041734182_MessagesTime.resx">
+      <DependentUpon>201505041734182_MessagesTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
