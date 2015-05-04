@@ -13,6 +13,8 @@ namespace GoldTeamProject7.Models
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
         public byte[] ProfileImage { get; set; }
+
+        public System.Linq.IQueryable<Product> Products { get; set; }
     }
     
     public class ManageLoginsViewModel

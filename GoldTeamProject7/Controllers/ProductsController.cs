@@ -22,9 +22,26 @@ namespace GoldTeamProject7.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Products.ToList());
+            var products = from p in db.Products
+                           select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                //Created a new list object
+
+                //seperate each string in query and add to list
+                var splitSearchQuery = searchString.Split(' ');
+
+                //iterate over every item in list.
+                foreach (var item in splitSearchQuery)
+                {
+                    products = products.Where(p => p.Title.Contains(item));
+                }
+            }
+
+            return View(products);
         }
 
         // GET: Products/Details/5

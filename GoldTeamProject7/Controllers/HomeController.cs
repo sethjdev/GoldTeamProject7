@@ -14,12 +14,12 @@ namespace GoldTeamProject7.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var products = from p in db.Products
                          select p;
 
-            return View(products.ToList());
+            return View(products);
         }
 
         public ActionResult About()

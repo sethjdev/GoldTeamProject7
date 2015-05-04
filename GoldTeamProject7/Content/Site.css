@@ -147,6 +147,29 @@ body a {
         margin-right: auto;
     }
 
+.categories {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+.categories p {
+    display: inline;
+    font-weight: bold;
+    font-size: .8em;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.categories:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 30px;
+    background-color: #00b4ff;
+}
+
 
 
 
