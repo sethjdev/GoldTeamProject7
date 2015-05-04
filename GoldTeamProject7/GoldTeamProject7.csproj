@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\Bundles\Foundation.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -206,9 +207,13 @@
     <Compile Include="Migrations\201504302006029_refactorrelationship.Designer.cs">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504302035123_pricetodecimal.cs" />
-    <Compile Include="Migrations\201504302035123_pricetodecimal.Designer.cs">
-      <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
+    <Compile Include="Migrations\201505012122152_nicksethmerge.cs" />
+    <Compile Include="Migrations\201505012122152_nicksethmerge.Designer.cs">
+      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505020020297_fridaymerch2.cs" />
+    <Compile Include="Migrations\201505020020297_fridaymerch2.Designer.cs">
+      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201505011432093_messagestable.cs" />
     <Compile Include="Migrations\201505011432093_messagestable.Designer.cs">
@@ -236,16 +241,42 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\img\between-logo.png" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Readme\Foundation for Sites\readme.md" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\GoldTeamProject7.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\foundation\fastclick.js" />
+    <Content Include="Scripts\foundation\foundation.abide.js" />
+    <Content Include="Scripts\foundation\foundation.accordion.js" />
+    <Content Include="Scripts\foundation\foundation.alert.js" />
+    <Content Include="Scripts\foundation\foundation.clearing.js" />
+    <Content Include="Scripts\foundation\foundation.dropdown.js" />
+    <Content Include="Scripts\foundation\foundation.equalizer.js" />
+    <Content Include="Scripts\foundation\foundation.interchange.js" />
+    <Content Include="Scripts\foundation\foundation.joyride.js" />
+    <Content Include="Scripts\foundation\foundation.js" />
+    <Content Include="Scripts\foundation\foundation.magellan.js" />
+    <Content Include="Scripts\foundation\foundation.offcanvas.js" />
+    <Content Include="Scripts\foundation\foundation.orbit.js" />
+    <Content Include="Scripts\foundation\foundation.reveal.js" />
+    <Content Include="Scripts\foundation\foundation.slider.js" />
+    <Content Include="Scripts\foundation\foundation.tab.js" />
+    <Content Include="Scripts\foundation\foundation.tooltip.js" />
+    <Content Include="Scripts\foundation\foundation.topbar.js" />
+    <Content Include="Scripts\foundation\jquery.cookie.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -335,8 +366,11 @@
     <EmbeddedResource Include="Migrations\201504302006029_refactorrelationship.resx">
       <DependentUpon>201504302006029_refactorrelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504302035123_pricetodecimal.resx">
-      <DependentUpon>201504302035123_pricetodecimal.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505012122152_nicksethmerge.resx">
+      <DependentUpon>201505012122152_nicksethmerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505020020297_fridaymerch2.resx">
+      <DependentUpon>201505020020297_fridaymerch2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505011432093_messagestable.resx">
       <DependentUpon>201505011432093_messagestable.cs</DependentUpon>
