@@ -56,6 +56,8 @@ namespace GoldTeamProject7.Controllers
             {
                 return HttpNotFound();
             }
+
+
             return View(product);
         }
 

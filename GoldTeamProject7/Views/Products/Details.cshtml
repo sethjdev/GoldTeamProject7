@@ -4,84 +4,25 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+@Html.DisplayFor(model => model.Title)
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-        </dt>
-            @Html.DisplayNameFor(model => model.Title)
+@Html.DisplayFor(model => model.Price)
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+@Html.DisplayFor(model => model.Photo)
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+@Html.DisplayFor(model => model.Description)
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+@Html.DisplayFor(model => model.Category)
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
+@Html.DisplayFor(model => model.ApplicationUser.FirstName)
 
-        <dd>
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
+@Html.DisplayFor(model => model.ApplicationUser.LastName)
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+@Html.DisplayFor(model => model.ApplicationUser.Zipcode)
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+<img src="data:image;base64,@Convert.ToBase64String(Model.ApplicationUser.ProfileImage)" />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Availability)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Availability)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.FirstName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.LastName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.Zipcode)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.Zipcode)
-        </dd>
-
-    </dl>
-</div>
-<p>
+@*<p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@
