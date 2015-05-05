@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201505051801496_RemoveTransactionIDFromMessages.Designer.cs">
       <DependentUpon>201505051801496_RemoveTransactionIDFromMessages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505051809325_AddedBuyerIDToProducts.cs" />
+    <Compile Include="Migrations\201505051809325_AddedBuyerIDToProducts.Designer.cs">
+      <DependentUpon>201505051809325_AddedBuyerIDToProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -404,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505051801496_RemoveTransactionIDFromMessages.resx">
       <DependentUpon>201505051801496_RemoveTransactionIDFromMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505051809325_AddedBuyerIDToProducts.resx">
+      <DependentUpon>201505051809325_AddedBuyerIDToProducts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
