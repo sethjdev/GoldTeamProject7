@@ -56,7 +56,7 @@ namespace GoldTeamProject7.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Create([Bind(Include = "ID,Title,Price,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
+        public ActionResult Create([Bind(Include = "ID,Title,Price,MainPhoto, Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
         {
             
             if (ModelState.IsValid)
@@ -67,7 +67,7 @@ namespace GoldTeamProject7.Controllers
 
                 using (var ms = new MemoryStream())
                 {
-                    
+                    if (ImageFile != null)
                     {
                         ImageFile.InputStream.CopyTo(ms);
                         product.MainPhoto = ms.ToArray();
