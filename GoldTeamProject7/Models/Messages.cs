@@ -16,7 +16,5 @@ namespace GoldTeamProject7.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateSent { get; set; }
 
-        public string BuyerID { get; set; }
-        public virtual ApplicationUser Buyer { get; set; }
     }
 }
