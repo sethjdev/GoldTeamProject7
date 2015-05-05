@@ -244,6 +244,10 @@
     <Compile Include="Migrations\201505051809325_AddedBuyerIDToProducts.Designer.cs">
       <DependentUpon>201505051809325_AddedBuyerIDToProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505051815211_BuyerIDToMessages.cs" />
+    <Compile Include="Migrations\201505051815211_BuyerIDToMessages.Designer.cs">
+      <DependentUpon>201505051815211_BuyerIDToMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -411,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505051809325_AddedBuyerIDToProducts.resx">
       <DependentUpon>201505051809325_AddedBuyerIDToProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505051815211_BuyerIDToMessages.resx">
+      <DependentUpon>201505051815211_BuyerIDToMessages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
