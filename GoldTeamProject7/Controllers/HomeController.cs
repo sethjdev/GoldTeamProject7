@@ -16,8 +16,8 @@ namespace GoldTeamProject7.Controllers
 
         public ActionResult Index(string searchString)
         {
-            var products = from p in db.Products
-                         select p;
+            var products = (from p in db.Products
+                            select p).OrderByDescending(d => d.UploadDate);
 
             return View(products);
         }

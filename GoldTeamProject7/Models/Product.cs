@@ -18,6 +18,7 @@ namespace GoldTeamProject7.Models
         public string Description { get; set; }
         public bool Availability { get; set; }
         public string Category { get; set; }
+        public DateTime UploadDate { get; set; }
 
         public string ApplicationUserID { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }

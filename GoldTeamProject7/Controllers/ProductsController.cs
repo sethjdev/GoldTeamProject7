@@ -97,6 +97,7 @@ namespace GoldTeamProject7.Controllers
                 db.Products.Add(product);
                 var userID = User.Identity.GetUserId();
                 product.ApplicationUserID = userID;
+                product.UploadDate = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
