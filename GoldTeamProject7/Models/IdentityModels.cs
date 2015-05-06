@@ -40,9 +40,5 @@ namespace GoldTeamProject7.Models
 
         public System.Data.Entity.DbSet<GoldTeamProject7.Models.Messages> Messages { get; set; }
 
-<<<<<<< HEAD
-=======
-        public System.Data.Entity.DbSet<GoldTeamProject7.Models.Transaction> Transactions { get; set; }
->>>>>>> Nick's-Branch
     }
 }

@@ -5,9 +5,18 @@
     ViewBag.Title = "Create";
 }
 
+<<<<<<< HEAD
 @using (Html.BeginForm("Create", "Products", FormMethod.Post,
                              new { enctype = "multipart/form-data" }))
 { 
+=======
+@User.Identity.GetUserId()
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    
+    
+>>>>>>> Keonna's-Branch2
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
@@ -32,11 +41,21 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.MainImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <p>
                     <input name="ImageFile" type="file" />
                 </p>
+=======
+            @Html.LabelFor(model => model.MainPhoto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFile" id="file" />
+                
+               
+                
+
+>>>>>>> Keonna's-Branch2
             </div>
         </div>
 

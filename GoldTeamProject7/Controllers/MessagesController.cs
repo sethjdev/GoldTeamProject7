@@ -18,25 +18,10 @@ namespace GoldTeamProject7.Controllers
         // GET: Messages
         public async Task<ActionResult> Index()
         {
-            //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-            //{
-            //        modelBuilder.Entity<Product>()
-            //        .HasRequired(m => m.Buyer)
-            //        .WithMany(t => t.Messages)
-            //        .HasForeignKey(m => m.BuyerId)
-            //        .WillCascadeOnDelete(false);
-
-            //        modelBuilder.Entity<Product>()
-            //        .HasRequired(m => m.ApplicationUser)
-            //        .WithMany(t => t.Messages)
-            //        .HasForeignKey(m => m.ApplicationUserId)
-            //        .WillCascadeOnDelete(false);
-            //}
 
             var buyerProducts = from p in db.Products
                                 orderby p.Title
                                 select p;
-//                          where p.BuyerID = ApplicationUser.ID;
 
             var buyerMessages = new List<Messages>();
             foreach (Product p in buyerProducts)
