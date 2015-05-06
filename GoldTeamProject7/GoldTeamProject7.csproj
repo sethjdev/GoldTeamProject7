@@ -179,9 +179,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505061738356_postmerge.cs" />
-    <Compile Include="Migrations\201505061738356_postmerge.Designer.cs">
-      <DependentUpon>201505061738356_postmerge.cs</DependentUpon>
+    <Compile Include="Migrations\201505061848437_postMergeNick.cs" />
+    <Compile Include="Migrations\201505061848437_postMergeNick.Designer.cs">
+      <DependentUpon>201505061848437_postMergeNick.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -285,8 +285,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505061738356_postmerge.resx">
-      <DependentUpon>201505061738356_postmerge.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505061848437_postMergeNick.resx">
+      <DependentUpon>201505061848437_postMergeNick.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
