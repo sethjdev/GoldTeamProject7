@@ -74,11 +74,7 @@ namespace GoldTeamProject7.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,ApplicationUserID")] Product product)
-=======
         public ActionResult Create([Bind(Include = "ID,Title,Price,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
->>>>>>> Keonna's-Branch2
         {
             
             if (ModelState.IsValid)
@@ -86,9 +82,7 @@ namespace GoldTeamProject7.Controllers
                 db.Products.Add(product);
                 var userID = User.Identity.GetUserId();
                 product.ApplicationUserID = userID;
-<<<<<<< HEAD
                 product.UploadDate = DateTime.Now;
-=======
 
                 using (var ms = new MemoryStream())
                 {
@@ -98,7 +92,7 @@ namespace GoldTeamProject7.Controllers
                     }
 
                 }
->>>>>>> Keonna's-Branch2
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
