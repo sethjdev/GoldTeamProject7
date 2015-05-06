@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GoldTeamProject7.Models.Messages>
+﻿@model IEnumerable<GoldTeamProject7.Models.Transaction>
 
 @{
     ViewBag.Title = "Index";
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Message)
+            @Html.DisplayNameFor(model => model.Product.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DateSent)
+            @Html.DisplayNameFor(model => model.Created)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProductID)
+            @Html.DisplayNameFor(model => model.BuyerID)
         </th>
         <th></th>
     </tr>
@@ -26,13 +26,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Message)
+            @Html.DisplayFor(modelItem => item.Product.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateSent)
+            @Html.DisplayFor(modelItem => item.Created)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProductID)
+            @Html.DisplayFor(modelItem => item.BuyerID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

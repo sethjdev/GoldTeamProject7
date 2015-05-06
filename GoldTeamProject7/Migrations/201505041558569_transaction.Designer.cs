@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class fridaymerch2 : IMigrationMetadata
+    public sealed partial class transaction : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fridaymerch2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(transaction));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505020020297_fridaymerch2"; }
+            get { return "201505041558569_transaction"; }
         }
         
         string IMigrationMetadata.Source

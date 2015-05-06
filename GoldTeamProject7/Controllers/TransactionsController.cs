@@ -11,137 +11,112 @@ using GoldTeamProject7.Models;
 
 namespace GoldTeamProject7.Controllers
 {
-    public class MessagesController : Controller
+    public class TransactionsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Messages
+        // GET: Transactions
         public async Task<ActionResult> Index()
         {
-            //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-            //{
-            //        modelBuilder.Entity<Product>()
-            //        .HasRequired(m => m.Buyer)
-            //        .WithMany(t => t.Messages)
-            //        .HasForeignKey(m => m.BuyerId)
-            //        .WillCascadeOnDelete(false);
-
-            //        modelBuilder.Entity<Product>()
-            //        .HasRequired(m => m.ApplicationUser)
-            //        .WithMany(t => t.Messages)
-            //        .HasForeignKey(m => m.ApplicationUserId)
-            //        .WillCascadeOnDelete(false);
-            //}
-
-            var buyerProducts = from p in db.Products
-                                orderby p.Title
-                                select p;
-//                          where p.BuyerID = ApplicationUser.ID;
-
-            var buyerMessages = new List<Messages>();
-            foreach (Product p in buyerProducts)
-                {
-                    foreach (Messages m in db.Messages)
-                        {
-                            buyerMessages.Add(m);
-                        }
-                }
-
-        
-            return View(await db.Messages.ToListAsync());
+            var transactions = db.Transactions.Include(t => t.Product);
+            return View(await transactions.ToListAsync());
         }
 
-        // GET: Messages/Details/5
+        // GET: Transactions/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Messages messages = await db.Messages.FindAsync(id);
-            if (messages == null)
+            Transaction transaction = await db.Transactions.FindAsync(id);
+            if (transaction == null)
             {
                 return HttpNotFound();
             }
-            return View(messages);
+            return View(transaction);
         }
 
-        // GET: Messages/Create
+        // GET: Transactions/Create
         public ActionResult Create()
         {
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "Title");
             return View();
         }
 
-        // POST: Messages/Create
+        // POST: Transactions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,Message,DateSent,TransactionID")] Messages messages)
+        public async Task<ActionResult> Create([Bind(Include = "ID,MessageID,Created,BuyerID,ProductID")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
-                db.Messages.Add(messages);
+                db.Transactions.Add(transaction);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(messages);
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "Title", transaction.ProductID);
+            return View(transaction);
         }
 
-        // GET: Messages/Edit/5
+        // GET: Transactions/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Messages messages = await db.Messages.FindAsync(id);
-            if (messages == null)
+            Transaction transaction = await db.Transactions.FindAsync(id);
+            if (transaction == null)
             {
                 return HttpNotFound();
             }
-            return View(messages);
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "Title", transaction.ProductID);
+            return View(transaction);
         }
 
-        // POST: Messages/Edit/5
+        // POST: Transactions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,Message,DateSent,TransactionID")] Messages messages)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,MessageID,Created,BuyerID,ProductID")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(messages).State = EntityState.Modified;
+                db.Entry(transaction).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(messages);
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "Title", transaction.ProductID);
+            return View(transaction);
         }
 
-        // GET: Messages/Delete/5
+        // GET: Transactions/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Messages messages = await db.Messages.FindAsync(id);
-            if (messages == null)
+            Transaction transaction = await db.Transactions.FindAsync(id);
+            if (transaction == null)
             {
                 return HttpNotFound();
             }
-            return View(messages);
+            return View(transaction);
         }
 
-        // POST: Messages/Delete/5
+        // POST: Transactions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Messages messages = await db.Messages.FindAsync(id);
-            db.Messages.Remove(messages);
+            Transaction transaction = await db.Transactions.FindAsync(id);
+            db.Transactions.Remove(transaction);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
