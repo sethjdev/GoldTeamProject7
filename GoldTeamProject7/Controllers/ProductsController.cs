@@ -55,7 +55,6 @@ namespace GoldTeamProject7.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public ActionResult Create([Bind(Include = "ID,Title,Price,Description,Availability,Category,ApplicationUserID")] Product product, HttpPostedFileBase ImageFile)
         {
             
@@ -67,13 +66,12 @@ namespace GoldTeamProject7.Controllers
 
                 using (var ms = new MemoryStream())
                 {
-                    
                     {
                         ImageFile.InputStream.CopyTo(ms);
                         product.MainPhoto = ms.ToArray();
                     }
-                }
 
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

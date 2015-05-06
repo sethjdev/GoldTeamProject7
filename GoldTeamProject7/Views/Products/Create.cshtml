@@ -7,8 +7,10 @@
 
 @User.Identity.GetUserId()
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
+    
+    
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
@@ -35,10 +37,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MainPhoto, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.ValidationMessageFor(model => model.MainPhoto, "", new { @class = "text-danger" })
-                <label for="ImageFile">Upload Image:</label>
-                <input name="ImageFile" type="file" />
-                    
+                <input type="file" name="ImageFile" id="file" />
+                
+               
                 
 
             </div>
