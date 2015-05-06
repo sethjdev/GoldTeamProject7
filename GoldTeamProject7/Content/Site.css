@@ -1,21 +1,30 @@
 ﻿/*Custom CSS
 
     Table of contents:
-
-    1. Homepage
-
+    1. Typography
+    2. Navigation
+    3. Homepage
+    4. Product Details
 
 */
 
+/*===================================
+    Typography
+=====================================*/
+
+body a,
+body p,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: #333;
+}
 
 /*===================================
     NAVIGATION
 =====================================*/
-
-body p,
-body a {
-    font-family: 'Open Sans', sans-serif;
-}
 
 #navigation-bar {
     height: 100px;
@@ -95,7 +104,7 @@ body a {
     #registerLink:hover,
     #loginLink:hover,
     .logOffbutton:hover {
-        box-shadow: 0 1px 0 #f0f0f0;
+        box-shadow: 0 1px 0 #c2c2c2;
         opacity: .7;   
     }
 
@@ -172,9 +181,89 @@ body a {
 }
 
 
+/*===================================
+ PRODUCT DETAILS
+=====================================*/
 
+.product-title,
+.detail-price {
+    font-size: 60px;
+}
 
+.product-title {
+    font-weight: normal;
+}
 
+.main-image img {
+    border-radius: 5px;
+}
+
+.detail-price {
+    margin-top: -23px;
+}
+
+.purchase-button {
+    background-color: #00b4ff;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 45px;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 28px;
+    text-transform: uppercase;
+    box-shadow: #c2c2c2 0px 3px;
+    transition: all .2s ease-in-out;
+}
+
+    .purchase-button:hover {
+       opacity: .7;
+       box-shadow: #c2c2c2 0px 1px;
+    }
+
+.purchase-info {
+    margin-top: 85px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.seller-headline {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.seller-name {
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 5px;
+}
+
+.seller-image img {
+    width: 80px;
+    border-radius: 50%!important;
+    margin-right: 20px;
+}
+
+.seller-image img,
+.seller-name,
+.detail-zipcode {
+    float: left;
+}
+
+.detail-zipcode {
+   margin-top: 40px;
+   margin-left: -55px;
+   font-size: 1.2em;
+}
+
+    .detail-zipcode span {
+        font-weight: bold;
+        padding-right: 7px;
+    }
+
+.detail-desc {
+    font-size: 1.3em;
+}
 
 
 

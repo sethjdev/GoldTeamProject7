@@ -4,25 +4,40 @@
     ViewBag.Title = "Details";
 }
 
-@Html.DisplayFor(model => model.Title)
+<div class="row">
+    <div class="large-12 columns">
+        <h1 class="product-title">@Html.DisplayFor(model => model.Title)</h1>
+    </div>
+</div>
 
-@Html.DisplayFor(model => model.Price)
+<div class="row">
+    <div class="large-7 columns">
+        <span class="main-image"><img src="data:image;base64,@Convert.ToBase64String(Model.MainPhoto)" /></span>
+    </div>
+    <div class="large-5 columns">
+        <p class="detail-price">@Html.DisplayFor(model => model.Price)</p>
+        <a class="purchase-button">Make An Offer</a>
+        <p class="purchase-info">When you make an offer you can message the seller and we suggest some public businesses to meet and conduct your transaction.</p>
+        <div class="seller-wrap">
+            <p class="seller-headline">Seller Information:</p>
+            <span class="seller-image"><img src="data:image;base64,@Convert.ToBase64String(Model.ApplicationUser.ProfileImage)" /></span>
+            <p class="seller-name">@Html.DisplayFor(model => model.ApplicationUser.FirstName)</p>
+            <p class="detail-zipcode"><span>Zipcode:</span>@Html.DisplayFor(model => model.ApplicationUser.Zipcode)</p>
+        </div>
+    </div>
+</div>
 
-@Html.DisplayFor(model => model.Description)
+<div class="row">
+    <div class="large-7 columns">
+        <p class="detail-desc">@Html.DisplayFor(model => model.Description)</p>
+    </div>
+</div>
+
+
 
 @Html.DisplayFor(model => model.Category)
 
-@Html.DisplayFor(model => model.ApplicationUser.FirstName)
-
-@Html.DisplayFor(model => model.ApplicationUser.LastName)
-
-<img src="data:image;base64,@Convert.ToBase64String(Model.MainPhoto)" />
-
-@Html.DisplayFor(model => model.ApplicationUser.Zipcode)
-
-<img src="data:image;base64,@Convert.ToBase64String(Model.ApplicationUser.ProfileImage)" />
-
 @*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
