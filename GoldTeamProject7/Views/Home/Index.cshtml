@@ -13,7 +13,7 @@
             <div class="large-3 columns">
                 <div class="product-card">
                     <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
-                        <img src="@Html.DisplayFor(modelItem => item.MainPhoto)" />
+                        <img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)" />
                         <p>@Html.DisplayFor(modelItem => item.Title)</p>
                         <p>@Html.DisplayFor(modelItem => item.Price)</p>
                     </a>
