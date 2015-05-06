@@ -72,26 +72,6 @@ namespace GoldTeamProject7.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public ActionResult FileUpload(HttpPostedFileBase file)
-        {
-            if (file != null)
-            {
-                string pic = System.IO.Path.GetFileName(file.FileName);
-                string path = System.IO.Path.Combine(Server.MapPath("~/images/profile"), pic);
-
-                //file is uploaded
-                file.SaveAs(path);
-            }
-            using (MemoryStream ms = new MemoryStream())
-            {
-                file.InputStream.CopyTo(ms);
-                byte[] array = ms.GetBuffer();
-            }
-
-            return RedirectToAction("Index");
-        }
-
         public ActionResult Create([Bind(Include = "ID,Title,Price,Photo,Description,Availability,Category,ApplicationUserID")] Product product)
         {
             if (ModelState.IsValid)
