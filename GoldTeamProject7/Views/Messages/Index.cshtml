@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<GoldTeamProject7.Models.Messages>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Messages";
 }
 
-<h2>Index</h2>
+<h2>Messages</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -17,10 +17,11 @@
         <th>
             @Html.DisplayNameFor(model => model.DateSent)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductID)
+        @*<th>
+             @Html.DisplayNameFor(model => model.ProductID)
+        </th>*@
+        <th>          
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -31,9 +32,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.DateSent)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.ProductID)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
