@@ -89,6 +89,25 @@ namespace GoldTeamProject7.Controllers
             return View(model);
         }
 
+        public async Task<ActionResult> Index()
+        {
+            var userID = User.Identity.GetUserId();
+
+            var ApplicationUserProducts = from p in db.Products
+                                orderby p.Title
+                                where p.ApplicationUserID == userID
+                                select p;
+
+            var ApplicationUserProductList = new List<Product>();
+            foreach (Product p in ApplicationUserProducts)
+            {
+                ApplicationUserProductList.Add(p);
+            }
+
+
+            return View(await db.Messages.ToListAsync());
+        }
+
         //
         // POST: /Manage/RemoveLogin
         [HttpPost]
