@@ -18,7 +18,7 @@ namespace GoldTeamProject7.Controllers
         {
             var products = from p in db.Products
                            where p.Availability == true
-                         select p;
+                           select p;
 
 
             return View(products.ToList());
