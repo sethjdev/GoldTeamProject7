@@ -17,7 +17,9 @@ namespace GoldTeamProject7.Controllers
         public ActionResult Index()
         {
             var products = from p in db.Products
+                           where p.Availability == true
                          select p;
+
 
             return View(products.ToList());
         }
