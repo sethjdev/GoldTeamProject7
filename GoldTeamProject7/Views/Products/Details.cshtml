@@ -16,8 +16,7 @@
     </div>
     <div class="large-5 columns">
         <p class="detail-price">@Html.DisplayFor(model => model.Price)</p>
-        @Html.ActionLink("Transaction", "Transaction", "Products", new { id = Model.ID }, null)
-        @*<a class="purchase-button">Make An Offer</a>*@
+        @Html.ActionLink("Make An Offer", "Transaction", "Products", new { id = Model.ID }, new { @class = "purchase-button" })
         <p class="purchase-info">When you make an offer you can message the seller and we suggest some public businesses to meet and conduct your transaction.</p>
         <div class="seller-wrap">
             <p class="seller-headline">Seller Information:</p>
