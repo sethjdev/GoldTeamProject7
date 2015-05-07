@@ -165,5 +165,10 @@ namespace GoldTeamProject7.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Transaction(int id) 
+        {
+            return View();
+        }
     }
 }
