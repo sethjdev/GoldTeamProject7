@@ -26,8 +26,10 @@ namespace GoldTeamProject7.Controllers
         public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "Title";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewBag.CategorySortParm = String.IsNullOrEmpty(sortOrder) ? "category_desc" : "Category";
+            
             if (searchString != null)
             {
                 page = 1;
@@ -47,7 +49,7 @@ namespace GoldTeamProject7.Controllers
                     products = products.OrderByDescending(p => p.Title);
                     break;
                 case "Price":
-                    products = products.OrderBy(p => p.Price);
+                    products = products.OrderByDescending(p => p.Price);
                     break;
                 case "category_desc":
                     products = products.OrderByDescending(p => p.Category);
@@ -58,17 +60,6 @@ namespace GoldTeamProject7.Controllers
             }
             int pageSize = 5; int pageNumber = (page ?? 1); return View(products.ToPagedList(pageNumber, pageSize));
         }
-
-
-
-
-
-
-
-
-
-
-
 
         // GET: Products/Details/5
         public ActionResult Details(int? id)
