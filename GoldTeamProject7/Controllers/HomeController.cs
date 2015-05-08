@@ -13,7 +13,7 @@ namespace GoldTeamProject7.Controllers
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         public ActionResult Index()
         {
             var products = from p in db.Products
