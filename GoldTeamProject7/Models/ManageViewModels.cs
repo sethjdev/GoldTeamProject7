@@ -13,6 +13,10 @@ namespace GoldTeamProject7.Models
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
         public byte[] ProfileImage { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Zipcode { get; set; }
+        public string Email { get; set; }
 
         public System.Linq.IQueryable<Product> Products { get; set; }
 

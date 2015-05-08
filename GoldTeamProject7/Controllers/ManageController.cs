@@ -86,7 +86,9 @@ namespace GoldTeamProject7.Controllers
                                select m.ProfileImage).FirstOrDefault(),
                 ApplicationUserProducts = from p in db.Products
                                           where p.ApplicationUserID == userId
-                                          select p
+                                          select p,
+                FirstName = model.FirstName
+                
             };
 
             return View(model);
