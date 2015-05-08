@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201505081744208_AppUserProductsToManageViewModels.Designer.cs">
       <DependentUpon>201505081744208_AppUserProductsToManageViewModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505081859105_RemovedApplicationUserProductsFromIdentityModels.cs" />
+    <Compile Include="Migrations\201505081859105_RemovedApplicationUserProductsFromIdentityModels.Designer.cs">
+      <DependentUpon>201505081859105_RemovedApplicationUserProductsFromIdentityModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -315,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505081744208_AppUserProductsToManageViewModels.resx">
       <DependentUpon>201505081744208_AppUserProductsToManageViewModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505081859105_RemovedApplicationUserProductsFromIdentityModels.resx">
+      <DependentUpon>201505081859105_RemovedApplicationUserProductsFromIdentityModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
