@@ -20,7 +20,7 @@ namespace GoldTeamProject7.Controllers
     public class ManageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -83,30 +83,15 @@ namespace GoldTeamProject7.Controllers
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
                 ProfileImage = (from m in db.Users
                                 where m.Id == userId
-                               select m.ProfileImage).FirstOrDefault()
+                               select m.ProfileImage).FirstOrDefault(),
+                ApplicationUserProducts = from p in db.Products
+                                          where p.ApplicationUserID == userId
+                                          select p
             };
 
             return View(model);
         }
 
-        public async Task<ActionResult> Index()
-        {
-            var userID = User.Identity.GetUserId();
-
-            var ApplicationUserProducts = from p in db.Products
-                                orderby p.Title
-                                where p.ApplicationUserID == userID
-                                select p;
-
-            var ApplicationUserProductList = new List<Product>();
-            foreach (Product p in ApplicationUserProducts)
-            {
-                ApplicationUserProductList.Add(p);
-            }
-
-
-            return View(await db.Messages.ToListAsync());
-        }
 
         //
         // POST: /Manage/RemoveLogin

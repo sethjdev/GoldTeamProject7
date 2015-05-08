@@ -17,7 +17,12 @@ namespace GoldTeamProject7.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateSent { get; set; }
 
-        public int ProductID { get; set; }
+        public string ProductID { get; set; }
         public virtual Product Product { get; set; }
+
+        public string ApplicationUserID { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
+
     }
 }

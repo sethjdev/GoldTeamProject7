@@ -183,6 +183,22 @@
     <Compile Include="Migrations\201505061848437_postMergeNick.Designer.cs">
       <DependentUpon>201505061848437_postMergeNick.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505081447038_AppUserinMessages.cs" />
+    <Compile Include="Migrations\201505081447038_AppUserinMessages.Designer.cs">
+      <DependentUpon>201505081447038_AppUserinMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505081539242_CommentedOutApplicationUserProducts.cs" />
+    <Compile Include="Migrations\201505081539242_CommentedOutApplicationUserProducts.Designer.cs">
+      <DependentUpon>201505081539242_CommentedOutApplicationUserProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505081543518_CommentedOutApplicationUserProducts2.cs" />
+    <Compile Include="Migrations\201505081543518_CommentedOutApplicationUserProducts2.Designer.cs">
+      <DependentUpon>201505081543518_CommentedOutApplicationUserProducts2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505081744208_AppUserProductsToManageViewModels.cs" />
+    <Compile Include="Migrations\201505081744208_AppUserProductsToManageViewModels.Designer.cs">
+      <DependentUpon>201505081744208_AppUserProductsToManageViewModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -287,6 +303,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505061848437_postMergeNick.resx">
       <DependentUpon>201505061848437_postMergeNick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505081447038_AppUserinMessages.resx">
+      <DependentUpon>201505081447038_AppUserinMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505081539242_CommentedOutApplicationUserProducts.resx">
+      <DependentUpon>201505081539242_CommentedOutApplicationUserProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505081543518_CommentedOutApplicationUserProducts2.resx">
+      <DependentUpon>201505081543518_CommentedOutApplicationUserProducts2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505081744208_AppUserProductsToManageViewModels.resx">
+      <DependentUpon>201505081744208_AppUserProductsToManageViewModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
