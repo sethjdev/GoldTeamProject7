@@ -168,7 +168,12 @@ namespace GoldTeamProject7.Controllers
 
         public ActionResult Transaction(int id) 
         {
-            return View();
+            Product product = db.Products.Find(id);
+
+            var message = from p in db.Messages
+                          select p;
+
+            return View(product);
         }
     }
 }

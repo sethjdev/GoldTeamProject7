@@ -74,6 +74,7 @@ namespace GoldTeamProject7.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -81,6 +82,7 @@ namespace GoldTeamProject7.Controllers
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+
                 ProfileImage = (from m in db.Users
                                 where m.Id == userId
                                select m.ProfileImage).FirstOrDefault()

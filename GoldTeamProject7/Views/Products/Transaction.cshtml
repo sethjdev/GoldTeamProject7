@@ -1,7 +1,14 @@
-﻿
+﻿@model GoldTeamProject7.Models.Product
+
 @{
     ViewBag.Title = "Transaction";
 }
 
-<h2>Transaction</h2>
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+<h2>@Html.DisplayFor(model => model.ApplicationUser.FirstName)</h2>
+<h2>@Html.DisplayFor(model => model.ApplicationUser.LastName)</h2>
+
+
+
+
 
