@@ -179,17 +179,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505071920374_messageprodFK3.cs" />
-    <Compile Include="Migrations\201505071920374_messageprodFK3.Designer.cs">
-      <DependentUpon>201505071920374_messageprodFK3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505071922183_addproductID.cs" />
-    <Compile Include="Migrations\201505071922183_addproductID.Designer.cs">
-      <DependentUpon>201505071922183_addproductID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505071937016_senderreceiver.cs" />
-    <Compile Include="Migrations\201505071937016_senderreceiver.Designer.cs">
-      <DependentUpon>201505071937016_senderreceiver.cs</DependentUpon>
+    <Compile Include="Migrations\201505081326332_messageuserfk.cs" />
+    <Compile Include="Migrations\201505081326332_messageuserfk.Designer.cs">
+      <DependentUpon>201505081326332_messageuserfk.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -294,14 +286,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505071920374_messageprodFK3.resx">
-      <DependentUpon>201505071920374_messageprodFK3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505071922183_addproductID.resx">
-      <DependentUpon>201505071922183_addproductID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505071937016_senderreceiver.resx">
-      <DependentUpon>201505071937016_senderreceiver.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505081326332_messageuserfk.resx">
+      <DependentUpon>201505081326332_messageuserfk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,9 +21,6 @@ namespace GoldTeamProject7.Models
         public string Category { get; set; }
         public DateTime UploadDate { get; set; }
 
-        public string BuyerID { get; set; }
-        public virtual ApplicationUser Buyer { get; set; }
-
         public string ApplicationUserID { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 

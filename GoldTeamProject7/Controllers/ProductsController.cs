@@ -166,12 +166,10 @@ namespace GoldTeamProject7.Controllers
             base.Dispose(disposing);
         }
 
+        //Products/Transaction/1
         public ActionResult Transaction(int id) 
         {
             Product product = db.Products.Find(id);
-
-            var message = from p in db.Messages
-                          select p;
 
             return View(product);
         }

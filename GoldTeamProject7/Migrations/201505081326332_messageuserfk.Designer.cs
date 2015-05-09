@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class senderreceiver : IMigrationMetadata
+    public sealed partial class messageuserfk : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(senderreceiver));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(messageuserfk));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505071937016_senderreceiver"; }
+            get { return "201505081326332_messageuserfk"; }
         }
         
         string IMigrationMetadata.Source

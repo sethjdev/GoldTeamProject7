@@ -208,6 +208,7 @@ a {
 
 .purchase-button {
     background-color: #00b4ff;
+    border: 1px solid #00a2e5;
     color: #fff;
     font-weight: 600;
     padding: 15px 45px;
