@@ -21,6 +21,8 @@ namespace GoldTeamProject7.Models
         public System.Linq.IQueryable<Product> Products { get; set; }
 
         public System.Linq.IQueryable<Product> ApplicationUserProducts { get; set; }
+
+        public System.Linq.IQueryable<Messages> ProductMessages { get; set; }
     }
     
     public class ManageLoginsViewModel

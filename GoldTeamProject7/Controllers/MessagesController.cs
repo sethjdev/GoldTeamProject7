@@ -33,7 +33,7 @@ namespace GoldTeamProject7.Controllers
                 }
 
         
-            return View(await db.Messages.ToListAsync());
+            return View(buyerMessages);
         }
 
         // GET: Messages/Details/5

@@ -91,8 +91,12 @@ namespace GoldTeamProject7.Controllers
                 Email = await UserManager.GetEmailAsync(userId),
                 FirstName =  applicationUser.FirstName,
                 LastName = applicationUser.LastName,
-                Zipcode = applicationUser.Zipcode
-                
+                Zipcode = applicationUser.Zipcode,
+                //ProductMessages = from m in db.Messages
+                //                  orderby m.DateSent
+                //                  where m.ProductID == 
+                //                  select m,
+            
             };
 
             return View(model);
