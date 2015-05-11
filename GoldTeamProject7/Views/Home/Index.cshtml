@@ -1,19 +1,30 @@
-﻿@model IEnumerable<GoldTeamProject7.Models.Product>
+﻿
+
+@model PagedList.IPagedList<GoldTeamProject7.Models.Product>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 
 @{
     ViewBag.Title = "Home Page";
 }
 
+
+
+
+
 <div class="main-jumbotron">
 
 </div>
 <div class="row">
+
+
         @foreach (var item in Model)
         {
             <div class="large-3 columns">
                 <div class="product-card">
                     <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
-                        <img src="@Html.DisplayFor(modelItem => item.MainPhoto)" />
+                       <img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)" /> 
                         <p>@Html.DisplayFor(modelItem => item.Title)</p>
                         <p>@Html.DisplayFor(modelItem => item.Price)</p>
                     </a>
@@ -21,3 +32,10 @@
             </div>
         }  
 </div>
+
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

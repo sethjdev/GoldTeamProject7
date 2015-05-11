@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GoldTeamProject7.Models;
+using PagedList;
 
 namespace GoldTeamProject7.Controllers
 {
@@ -14,14 +15,23 @@ namespace GoldTeamProject7.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
             var products = from p in db.Products
                            where p.Availability == true
+                           orderby p.Title
                            select p;
 
+          var skip = 4;
+          var take = 4;
+          var query = products.Skip(skip).Take(take);
 
-            return View(products.ToList());
+          int pageSize = 5;
+           int pageNumber = (page ?? 1);
+         
+          return View(products.ToPagedList(1, pageSize));
+
+         
         }
 
         public ActionResult About()
