@@ -22,14 +22,14 @@ namespace GoldTeamProject7.Controllers
                            orderby p.Title
                            select p;
 
-          var skip = 4;
-          var take = 4;
+          var skip = 10;
+          var take = 10;
           var query = products.Skip(skip).Take(take);
 
-          int pageSize = 5;
-           int pageNumber = (page ?? 1);
+          int pageSize = 10;
+          int pageNumber = (page ?? 1);
          
-          return View(products.ToPagedList(1, pageSize));
+          return View(products.ToPagedList(pageNumber, pageSize));
 
          
         }
