@@ -92,10 +92,10 @@ namespace GoldTeamProject7.Controllers
                 FirstName =  applicationUser.FirstName,
                 LastName = applicationUser.LastName,
                 Zipcode = applicationUser.Zipcode,
-                //ProductMessages = from m in db.Messages
-                //                  orderby m.DateSent
-                //                  where m.ProductID == 
-                //                  select m,
+                ProductMessages = from m in db.Messages
+                                  orderby m.ProductID                                  
+                                  where m.ApplicationUserID == userId
+                                  select m,
             
             };
 

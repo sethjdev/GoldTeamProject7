@@ -19,6 +19,9 @@ namespace GoldTeamProject7.Models
         public bool Availability { get; set; }
         public string Category { get; set; }
         public DateTime UploadDate { get; set; }
+        public string ProductID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string TransactionID { get; set; }
 
         public string BuyerID { get; set; }
         public virtual ApplicationUser Buyer { get; set; }

@@ -16,7 +16,7 @@ namespace GoldTeamProject7.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult>  Index()
         {
 
             var buyerProducts = from p in db.Products
@@ -33,7 +33,7 @@ namespace GoldTeamProject7.Controllers
             }
 
 
-            return View(buyerMessages);
+            return View(await db.Messages.ToListAsync());
         }
 
         // GET: Messages/Details/5

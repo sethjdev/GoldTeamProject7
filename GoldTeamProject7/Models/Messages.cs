@@ -13,7 +13,9 @@ namespace GoldTeamProject7.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }        
+        
         public string Message { get; set; }
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateSent { get; set; }
 

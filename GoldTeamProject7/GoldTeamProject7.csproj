@@ -207,6 +207,18 @@
     <Compile Include="Migrations\201505091710237_infotoManageviewmodels.Designer.cs">
       <DependentUpon>201505091710237_infotoManageviewmodels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505111738175_hobo.cs" />
+    <Compile Include="Migrations\201505111738175_hobo.Designer.cs">
+      <DependentUpon>201505111738175_hobo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505111856488_updatetransactionview.cs" />
+    <Compile Include="Migrations\201505111856488_updatetransactionview.Designer.cs">
+      <DependentUpon>201505111856488_updatetransactionview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505111905185_Trans2Product.cs" />
+    <Compile Include="Migrations\201505111905185_Trans2Product.Designer.cs">
+      <DependentUpon>201505111905185_Trans2Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -329,6 +341,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505091710237_infotoManageviewmodels.resx">
       <DependentUpon>201505091710237_infotoManageviewmodels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505111738175_hobo.resx">
+      <DependentUpon>201505111738175_hobo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505111856488_updatetransactionview.resx">
+      <DependentUpon>201505111856488_updatetransactionview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505111905185_Trans2Product.resx">
+      <DependentUpon>201505111905185_Trans2Product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
