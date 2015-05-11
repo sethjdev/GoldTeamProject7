@@ -7,37 +7,27 @@
     <img src="data:image;base64,@Convert.ToBase64String(Model.ProfileImage)" class="large-5 columns"  />
     <div class="large-7 columns">
         
-        <h4>Your account settings</h4>
-        
+        <h4>
+            Your account settings
+            [
+            @Html.ActionLink("Change", "ChangeAccountSettings")
+            ]
+        </h4>
          <div>
              <h5>First Name:</h5>   
-             @Model.FirstName
-             [
-             @Html.ActionLink("Change", "ChangeFirstName")
-             ]  
-
-            
+             @Model.FirstName             
          </div>
         <div>
             <h5>Last Name:</h5>
             @Model.LastName
-            [           
-            @Html.ActionLink("Change", "ChangeLastName")           
-            ]
         </div>
         <div>
             <h5>Email:</h5>
             @Model.Email
-            [
-             @Html.ActionLink("Change", "ChangeEmail")
-            ]
         </div>
         <div>
             <h5>Zipcode:</h5>
             @Model.Zipcode
-            [
-            @Html.ActionLink("Change", "ChangeZipcode")
-            ]
         </div>
 
             
@@ -94,7 +84,6 @@
                     <td>@item.Title</td>
                     <td>@item.Price</td>
                     <td>@item.Category</td>
-                    <td>@item.Availability</td>
                     
                     @if (item.Availability == true)
                     {
