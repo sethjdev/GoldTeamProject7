@@ -13,62 +13,30 @@
              <h5>First Name:</h5>   
              @Model.FirstName
              [
-             @if (@Model.FirstName != null)
-             {
-                 @Html.ActionLink("Change", "ChangeFirstName")
-                 
-             }
-             else
-             {
-                 @Html.ActionLink("Add", "AddFirstName")
-             }
-             ]
+             @Html.ActionLink("Change", "ChangeFirstName")
+             ]  
 
             
          </div>
         <div>
             <h5>Last Name:</h5>
             @Model.LastName
-            [
-            @if (@Model.LastName != null)
-            {
-                @Html.ActionLink("Change", "ChangeLastName")
-
-            }
-            else
-            {
-                @Html.ActionLink("Add", "AddLastName")
-            }
+            [           
+            @Html.ActionLink("Change", "ChangeLastName")           
             ]
         </div>
         <div>
             <h5>Email:</h5>
             @Model.Email
             [
-            @if (@Model.Email != null)
-            {
-                @Html.ActionLink("Change", "ChangeEmail")
-
-            }
-            else
-            {
-                @Html.ActionLink("Add", "AddEmail")
-            }
+             @Html.ActionLink("Change", "ChangeEmail")
             ]
         </div>
         <div>
             <h5>Zipcode:</h5>
             @Model.Zipcode
             [
-            @if (@Model.Zipcode != null)
-            {
-                @Html.ActionLink("Change", "ChangeZipcode")
-
-            }
-            else
-            {
-                @Html.ActionLink("Add", "AddZipcode")
-            }
+            @Html.ActionLink("Change", "ChangeZipcode")
             ]
         </div>
 
