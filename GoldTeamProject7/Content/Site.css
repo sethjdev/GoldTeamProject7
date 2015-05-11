@@ -1,16 +1,21 @@
 ﻿/*Custom CSS
 
     Table of contents:
+    i. Objects
     1. Typography
     2. Navigation
     3. Homepage
     4. Product Details
+    5. Footer
 
 */
 
 /*===================================
     Typography
 =====================================*/
+body {
+    overflow: scroll;
+}
 
 body a,
 body p,
@@ -34,6 +39,9 @@ a {
     height: 100px;
     background-color: #fff;
     border-bottom: 1px solid #d7d7d7;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
     #navigation-bar li {
@@ -143,8 +151,53 @@ a {
 .main-jumbotron {
     height: 500px;
     background-color: #515151;
-    width: 100%
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/Content/img/jumbo-bg.jpg);
+    background-position: -500px center;
 }
+
+    .main-jumbotron h2,
+    .main-jumbotron h3 {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 3px 0 #333;
+        
+    }
+
+    .main-jumbotron h2 {
+        font-weight: bold;
+        font-size: 80px;
+        margin-top: 100px;
+    }
+
+    .main-jumbotron h3 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+.jumbotron-btn {
+    background-color: #00b4ff;
+    border: 1px solid #00a2e5;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 45px;
+    border-radius: 5px;
+    font-size: 28px;
+    text-transform: uppercase;
+    box-shadow: #c2c2c2 0px 3px;
+    transition: all .2s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+    .jumbotron-btn:hover {
+        background-color: #fff;
+        color: #00b4ff;
+        border: 1px solid #d7d7d7;
+    }
 
 .product-card {
     border: 1px solid #515151;
@@ -153,6 +206,10 @@ a {
     margin-top: 30px;
     overflow: hidden;
 }
+
+    .product-card:hover {
+        opacity: .8;
+    }
 
     .product-card img {
         height: auto;
@@ -291,6 +348,35 @@ a {
 .detail-desc {
     font-size: 1.3em;
 }
+
+/*===================================
+    FOOTER
+=====================================*/
+
+footer {
+    margin-top: 50px;
+    background-color: #333;
+    height: 100px;
+    color: #fff!important;
+}
+
+    footer p {
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+
+
+/*===================================
+    Objects
+=====================================*/
+.pull-right {
+    float: right!important;
+    text-align: right;
+}
+
+
+
 
 
 
