@@ -14,8 +14,8 @@
                 <div class="product-card">
                     <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
                         <img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)" />
-                        <p>@Html.DisplayFor(modelItem => item.Title)</p>
-                        <p>@Html.DisplayFor(modelItem => item.Price)</p>
+                        <p class="title">@Html.DisplayFor(modelItem => item.Title)</p>
+                        <p class="price">@Html.DisplayFor(modelItem => item.Price)</p>
                     </a>
                 </div>
             </div>
