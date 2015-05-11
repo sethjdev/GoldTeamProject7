@@ -74,6 +74,7 @@ namespace GoldTeamProject7.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+            var applicationUser = await UserManager.FindByIdAsync(userId);
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -87,7 +88,10 @@ namespace GoldTeamProject7.Controllers
                 ApplicationUserProducts = from p in db.Products
                                           where p.ApplicationUserID == userId
                                           select p,
-                FirstName = model.FirstName
+                Email = await UserManager.GetEmailAsync(userId),
+                FirstName =  applicationUser.FirstName,
+                LastName = applicationUser.LastName,
+                Zipcode = applicationUser.Zipcode
                 
             };
 
