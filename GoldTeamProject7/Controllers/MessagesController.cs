@@ -25,14 +25,14 @@ namespace GoldTeamProject7.Controllers
 
             var buyerMessages = new List<Messages>();
             foreach (Product p in buyerProducts)
+            {
+                foreach (Messages m in db.Messages)
                 {
-                    foreach (Messages m in db.Messages)
-                        {
-                            buyerMessages.Add(m);
-                        }
+                    buyerMessages.Add(m);
                 }
+            }
 
-        
+
             return View(buyerMessages);
         }
 

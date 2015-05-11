@@ -128,6 +128,16 @@
                     <td>@item.Category</td>
                     <td>@item.Availability</td>
                     
+                    @if (item.Availability == true)
+                    {
+                        <td>Available</td>
+                    }
+                    else
+                    {
+                        <td>Unavailable</td>
+                    }
+                    
+                    
                 </tr>                
             </table>
     @*<div>
