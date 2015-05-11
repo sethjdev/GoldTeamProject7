@@ -191,12 +191,14 @@ a {
     margin-right: auto;
     text-align: center;
     margin-top: 50px;
+    width: 300px;
 }
 
     .jumbotron-btn:hover {
         background-color: #fff;
         color: #00b4ff;
         border: 1px solid #d7d7d7;
+        box-shadow: #333 0 2px;
     }
 
 .product-card {
