@@ -103,6 +103,14 @@
                 <div>
                 @message.DateSent
                 </div>
+                
+                foreach (var sender in Model.SenderTable.Where(s => s.Id == message.ApplicationUserID ))
+                {
+                    <div>
+                        @sender.UserName
+                    </div>
+                }
+                
                 <div>
                 @message.Message
                 </div>

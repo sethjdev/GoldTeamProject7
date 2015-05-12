@@ -93,9 +93,12 @@ namespace GoldTeamProject7.Controllers
                 LastName = applicationUser.LastName,
                 Zipcode = applicationUser.Zipcode,
                 ProductMessages = (from m in db.Messages
-                                  orderby m.ProductID                                  
-                                  where m.ApplicationUserID == userId
                                   select m).ToList(),
+                SenderTable = (from u in db.Users
+                               where u.UserName == u.UserName
+                                   select u).ToList()
+                         
+
                                     
             
             };
@@ -379,23 +382,7 @@ namespace GoldTeamProject7.Controllers
         //[ValidateAntiForgeryToken]
         //public async Task<ActionResult> ChangeAccountSettings(AccountSettingsModel model)
         //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(model);
-        //    }
-        //    // Generate the token and send it
-        //    var code = await UserManager.GenerateEmailConfirmationTokenAsync(model.Email);
-        //    if (UserManager.SmsService != null)
-        //    {
-        //        var message = new IdentityMessage
-        //        {
-        //            Destination = model.Number,
-        //            Body = "Your security code is: " + code
-        //        };
-        //        await UserManager.SmsService.SendAsync(message);
-        //    }
-        //    return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
-
+            
         //}
 
 

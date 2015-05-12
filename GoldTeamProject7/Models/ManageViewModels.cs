@@ -23,6 +23,8 @@ namespace GoldTeamProject7.Models
         public IEnumerable<Product> ApplicationUserProducts { get; set; }
 
         public IEnumerable<Messages> ProductMessages { get; set; }
+
+        public List<ApplicationUser> SenderTable { get; set; }
     }
     
     public class ManageLoginsViewModel
