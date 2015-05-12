@@ -207,6 +207,7 @@ a {
     border-radius: 5px;
     overflow: hidden;
     margin-top: 40px;
+    transition: all .3s ease-in-out;
 }
 
     .product-card:hover {
