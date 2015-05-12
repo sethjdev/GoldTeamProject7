@@ -60,7 +60,7 @@ namespace GoldTeamProject7.Controllers
 
             return View(product);
         }
-
+        [Authorize]
         // GET: Products/Create
         public ActionResult Create()
         {

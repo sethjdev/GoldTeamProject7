@@ -13,9 +13,6 @@
 /*===================================
     Typography
 =====================================*/
-body {
-    overflow: scroll;
-}
 
     body:not(#navigation-bar) {
         background-color: #f6f6f6
@@ -199,18 +196,17 @@ a {
 }
 
     .jumbotron-btn:hover {
-        background-color: #fff;
-        color: #00b4ff;
-        border: 1px solid #d7d7d7;
-        box-shadow: #333 0 2px;
+        background-color: #3ec2fa;
+        color: #fff;
+        box-shadow: #c2c2c2 0 2px;
     }
 
 .product-card {
     box-shadow: #838383 0 0 3px;
     background-color: #727272;
     border-radius: 5px;
-    margin-top: 30px;
     overflow: hidden;
+    margin-top: 40px;
 }
 
     .product-card:hover {
@@ -245,6 +241,7 @@ a {
         text-shadow: 0 1px 0 #999;
     }
 
+.item { width: 22%; }
 
 .categories {
     width: 100%;
