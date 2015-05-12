@@ -171,6 +171,7 @@ namespace GoldTeamProject7.Controllers
             return RedirectToAction("Index");
         }
 
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -178,6 +179,16 @@ namespace GoldTeamProject7.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Transaction(Product ID) 
+        {
+            var customerTransaction = from p in db.Products
+                                      where p == ID
+                                      select p;
+
+
+            return View(ID);
         }
     }
 }
