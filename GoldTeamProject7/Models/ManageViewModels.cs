@@ -20,9 +20,9 @@ namespace GoldTeamProject7.Models
 
         public System.Linq.IQueryable<Product> Products { get; set; }
 
-        public System.Linq.IQueryable<Product> ApplicationUserProducts { get; set; }
+        public IEnumerable<Product> ApplicationUserProducts { get; set; }
 
-        public System.Linq.IQueryable<Messages> ProductMessages { get; set; }
+        public IEnumerable<Messages> ProductMessages { get; set; }
     }
     
     public class ManageLoginsViewModel
@@ -104,8 +104,8 @@ namespace GoldTeamProject7.Models
         [DataType(DataType.PostalCode)]
         public string Zipcode { get; set; }
 
-        [Display(Name = "First Name")]
         [Required]
+        [Display(Name = "First Name")]       
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]

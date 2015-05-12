@@ -98,7 +98,15 @@
                 </tr>                
             </table>
     <div>
-        @Model.ProductMessages
+            @foreach(var message in Model.ProductMessages.Where(m => m.ProductID == item.ID))
+            {
+                <div>
+                @message.DateSent
+                </div>
+                <div>
+                @message.Message
+                </div>
+            }
     </div>
         }
 

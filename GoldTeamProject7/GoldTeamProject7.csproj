@@ -223,6 +223,22 @@
     <Compile Include="Migrations\201505120120055_HtmlRulezDood.Designer.cs">
       <DependentUpon>201505120120055_HtmlRulezDood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505121416007_messages.cs" />
+    <Compile Include="Migrations\201505121416007_messages.Designer.cs">
+      <DependentUpon>201505121416007_messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505121444360_newmessages.cs" />
+    <Compile Include="Migrations\201505121444360_newmessages.Designer.cs">
+      <DependentUpon>201505121444360_newmessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505121600223_productIDtoInt.cs" />
+    <Compile Include="Migrations\201505121600223_productIDtoInt.Designer.cs">
+      <DependentUpon>201505121600223_productIDtoInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505121713172_transactionId.cs" />
+    <Compile Include="Migrations\201505121713172_transactionId.Designer.cs">
+      <DependentUpon>201505121713172_transactionId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -357,6 +373,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505120120055_HtmlRulezDood.resx">
       <DependentUpon>201505120120055_HtmlRulezDood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505121416007_messages.resx">
+      <DependentUpon>201505121416007_messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505121444360_newmessages.resx">
+      <DependentUpon>201505121444360_newmessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505121600223_productIDtoInt.resx">
+      <DependentUpon>201505121600223_productIDtoInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505121713172_transactionId.resx">
+      <DependentUpon>201505121713172_transactionId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

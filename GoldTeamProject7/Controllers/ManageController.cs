@@ -74,7 +74,7 @@ namespace GoldTeamProject7.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
-            var applicationUser = await UserManager.FindByIdAsync(userId);
+            var applicationUser = await UserManager.FindByIdAsync(userId); 
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -85,17 +85,18 @@ namespace GoldTeamProject7.Controllers
                 ProfileImage = (from m in db.Users
                                 where m.Id == userId
                                select m.ProfileImage).FirstOrDefault(),
-                ApplicationUserProducts = from p in db.Products
+                ApplicationUserProducts = (from p in db.Products
                                           where p.ApplicationUserID == userId
-                                          select p,
+                                          select p).ToList(),
                 Email = await UserManager.GetEmailAsync(userId),
                 FirstName =  applicationUser.FirstName,
                 LastName = applicationUser.LastName,
                 Zipcode = applicationUser.Zipcode,
-                ProductMessages = from m in db.Messages
+                ProductMessages = (from m in db.Messages
                                   orderby m.ProductID                                  
                                   where m.ApplicationUserID == userId
-                                  select m,
+                                  select m).ToList(),
+                                    
             
             };
 
@@ -358,6 +359,45 @@ namespace GoldTeamProject7.Controllers
 
             base.Dispose(disposing);
         }
+
+
+
+
+
+
+
+        //// GET: /Manage/ChangeAccountSettings
+        //public ActionResult ChangeAccountSettings()
+        //{
+        //    return View();
+        //}
+
+
+        ////
+        //// POST: /Manage/ChangeAccountSettings
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> ChangeAccountSettings(AccountSettingsModel model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(model);
+        //    }
+        //    // Generate the token and send it
+        //    var code = await UserManager.GenerateEmailConfirmationTokenAsync(model.Email);
+        //    if (UserManager.SmsService != null)
+        //    {
+        //        var message = new IdentityMessage
+        //        {
+        //            Destination = model.Number,
+        //            Body = "Your security code is: " + code
+        //        };
+        //        await UserManager.SmsService.SendAsync(message);
+        //    }
+        //    return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
+
+        //}
+
 
 #region Helpers
         // Used for XSRF protection when adding external logins

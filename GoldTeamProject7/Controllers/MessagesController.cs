@@ -65,7 +65,7 @@ namespace GoldTeamProject7.Controllers
         public async Task<ActionResult> Create([Bind(Include = "ID,Message,DateSent,TransactionID")] Messages messages)
         {
             if (ModelState.IsValid)
-            {
+            {  
                 db.Messages.Add(messages);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -73,6 +73,17 @@ namespace GoldTeamProject7.Controllers
 
             return View(messages);
         }
+
+
+
+       
+       
+
+
+
+
+
+
 
         // GET: Messages/Edit/5
         public async Task<ActionResult> Edit(int? id)
