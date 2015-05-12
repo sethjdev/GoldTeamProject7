@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201505111905185_Trans2Product.Designer.cs">
       <DependentUpon>201505111905185_Trans2Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505120120055_HtmlRulezDood.cs" />
+    <Compile Include="Migrations\201505120120055_HtmlRulezDood.Designer.cs">
+      <DependentUpon>201505120120055_HtmlRulezDood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -350,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505111905185_Trans2Product.resx">
       <DependentUpon>201505111905185_Trans2Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505120120055_HtmlRulezDood.resx">
+      <DependentUpon>201505120120055_HtmlRulezDood.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
