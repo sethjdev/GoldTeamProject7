@@ -181,14 +181,11 @@ namespace GoldTeamProject7.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult Transaction(Product ID) 
+        public ActionResult Transaction(int id) 
         {
-            var customerTransaction = from p in db.Products
-                                      where p == ID
-                                      select p;
+            Product product = db.Products.Find(id);                        
 
-
-            return View(ID);
+            return View(product);
         }
     }
 }
