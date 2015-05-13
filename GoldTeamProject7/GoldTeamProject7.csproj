@@ -243,6 +243,18 @@
     <Compile Include="Migrations\201505121958010_dfasfasdf.Designer.cs">
       <DependentUpon>201505121958010_dfasfasdf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505131348582_oldMessages.cs" />
+    <Compile Include="Migrations\201505131348582_oldMessages.Designer.cs">
+      <DependentUpon>201505131348582_oldMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505131406507_oldMessages1.cs" />
+    <Compile Include="Migrations\201505131406507_oldMessages1.Designer.cs">
+      <DependentUpon>201505131406507_oldMessages1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505131451095_MessageChecking0.cs" />
+    <Compile Include="Migrations\201505131451095_MessageChecking0.Designer.cs">
+      <DependentUpon>201505131451095_MessageChecking0.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -392,6 +404,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505121958010_dfasfasdf.resx">
       <DependentUpon>201505121958010_dfasfasdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505131348582_oldMessages.resx">
+      <DependentUpon>201505131348582_oldMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505131406507_oldMessages1.resx">
+      <DependentUpon>201505131406507_oldMessages1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505131451095_MessageChecking0.resx">
+      <DependentUpon>201505131451095_MessageChecking0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

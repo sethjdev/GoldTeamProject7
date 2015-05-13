@@ -72,9 +72,27 @@ namespace GoldTeamProject7.Controllers
                 : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
-
+                       
             var userId = User.Identity.GetUserId();
-            var applicationUser = await UserManager.FindByIdAsync(userId); 
+            var applicationUser = await UserManager.FindByIdAsync(userId);
+
+            var oldMessages = 0;
+            var newMessages = 0;
+            var ApplicationUserProducts1 = (from p in db.Products
+                                            where p.ApplicationUserID == userId
+                                            select p).ToList();
+            var ProductMessages1 = (from m in db.Messages
+                                    select m).ToList();
+            foreach (var item in ApplicationUserProducts1)
+            {
+                foreach (var mess in ProductMessages1.Where(m => m.ProductID == item.ID))
+                {
+                    newMessages += 1;
+                }
+            }
+            var messagesBool = (oldMessages == newMessages) ? false : true;
+            oldMessages = newMessages;
+            
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -96,13 +114,14 @@ namespace GoldTeamProject7.Controllers
                                   select m).ToList(),
                 SenderTable = (from u in db.Users
                                where u.UserName == u.UserName
-                                   select u).ToList()
-                         
-
-                                    
+                                   select u).ToList(),
+                MessagesBool = messagesBool
+                                                             
             
             };
-
+            // add other logic here
+            //model.messagesBool = true;
+            
             return View(model);
         }
 

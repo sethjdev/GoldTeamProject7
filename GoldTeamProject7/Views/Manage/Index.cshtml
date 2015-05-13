@@ -99,7 +99,7 @@
             </table>
     <div>
             @foreach(var message in Model.ProductMessages.Where(m => m.ProductID == item.ID))
-            {
+            { 
                 <div>
                 @message.DateSent
                 </div>
@@ -117,6 +117,8 @@
             }
     </div>
         }
-
+        <div>
+            @Model.MessagesBool
+        </div>
         </div>
     </div>

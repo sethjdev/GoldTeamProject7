@@ -17,6 +17,7 @@ namespace GoldTeamProject7.Models
         public string LastName { get; set; }
         public string Zipcode { get; set; }
         public string Email { get; set; }
+        
 
         public System.Linq.IQueryable<Product> Products { get; set; }
 
@@ -25,6 +26,8 @@ namespace GoldTeamProject7.Models
         public IEnumerable<Messages> ProductMessages { get; set; }
 
         public List<ApplicationUser> SenderTable { get; set; }
+
+        public bool MessagesBool { get; set; }
     }
     
     public class ManageLoginsViewModel
