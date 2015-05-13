@@ -24,8 +24,6 @@ namespace GoldTeamProject7.Models
         public int TransactionID { get; set; }
         
         public string ApplicationUserID { get; set; }
-        
-
 
     }
 }

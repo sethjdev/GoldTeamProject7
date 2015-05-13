@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201505131451095_MessageChecking0.Designer.cs">
       <DependentUpon>201505131451095_MessageChecking0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505131914327_whatsupper.cs" />
+    <Compile Include="Migrations\201505131914327_whatsupper.Designer.cs">
+      <DependentUpon>201505131914327_whatsupper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -413,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505131451095_MessageChecking0.resx">
       <DependentUpon>201505131451095_MessageChecking0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505131914327_whatsupper.resx">
+      <DependentUpon>201505131914327_whatsupper.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

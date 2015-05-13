@@ -17,6 +17,7 @@ namespace GoldTeamProject7.Models
         public string LastName { get; set; }
         public string Zipcode { get; set; }
         public string Email { get; set; }
+        public int oldMessages { get; set; }
         
 
         public System.Linq.IQueryable<Product> Products { get; set; }

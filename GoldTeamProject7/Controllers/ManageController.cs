@@ -76,7 +76,6 @@ namespace GoldTeamProject7.Controllers
             var userId = User.Identity.GetUserId();
             var applicationUser = await UserManager.FindByIdAsync(userId);
 
-            var oldMessages = 0;
             var newMessages = 0;
             var ApplicationUserProducts1 = (from p in db.Products
                                             where p.ApplicationUserID == userId
@@ -90,8 +89,9 @@ namespace GoldTeamProject7.Controllers
                     newMessages += 1;
                 }
             }
-            var messagesBool = (oldMessages == newMessages) ? false : true;
-            oldMessages = newMessages;
+            var messagesBool = (applicationUser.oldMessages == newMessages) ? false : true;
+            applicationUser.oldMessages = newMessages;
+            UserManager.Update(applicationUser);
             
             var model = new IndexViewModel
             {
@@ -126,6 +126,7 @@ namespace GoldTeamProject7.Controllers
         }
 
 
+        
         //
         // POST: /Manage/RemoveLogin
         [HttpPost]
