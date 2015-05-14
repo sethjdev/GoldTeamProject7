@@ -1,63 +1,24 @@
 ﻿@model IEnumerable<GoldTeamProject7.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Search Results:";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MainPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Availability)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MainPhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Availability)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="row">
+    <div class="large-12 columns">
+        <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 100, "itemSelector": ".item", "gutter": 24 }'>
+            @foreach (var item in Model)
+            {
+                <div class="item">
+                    <div class="product-card">
+                        <a href="/Products/Details/@Html.DisplayFor(modelItem => item.ID)">
+                            <img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)" />
+                            <p class="title">@Html.DisplayFor(modelItem => item.Title)</p>
+                            <p class="price">@Html.DisplayFor(modelItem => item.Price)</p>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
