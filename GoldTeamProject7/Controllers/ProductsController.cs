@@ -191,9 +191,16 @@ namespace GoldTeamProject7.Controllers
 
         public ActionResult Transaction(int id) 
         {
-            Product product = db.Products.Find(id);                        
 
-            return View(product);
+            var viewModel = new TransactionViewModel();
+
+            viewModel.Product = db.Products.Find(id);
+            var userId = User.Identity.GetUserId();
+            viewModel.CurrentUser = (from p in db.Users
+                                    where p.Id == userId
+                                    select p).SingleOrDefault();
+
+            return View(viewModel);
         }
     }
 }
