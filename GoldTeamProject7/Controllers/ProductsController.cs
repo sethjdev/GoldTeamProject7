@@ -202,5 +202,28 @@ namespace GoldTeamProject7.Controllers
 
             return View(viewModel);
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> CreateMessage([Bind(Include = "ProductID, Message")] Messages messages)
+        {
+            if (ModelState.IsValid)
+            {
+                var viewModel = new TransactionViewModel();
+
+                db.Messages.Add(messages);
+
+                messages.ApplicationUserID = User.Identity.GetUserId();
+                messages.DateSent = DateTime.Now;
+
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            return View(messages);
+        }
+
+
     }
 }

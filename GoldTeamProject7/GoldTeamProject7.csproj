@@ -185,9 +185,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505141544161_merge2K.cs" />
-    <Compile Include="Migrations\201505141544161_merge2K.Designer.cs">
-      <DependentUpon>201505141544161_merge2K.cs</DependentUpon>
+    <Compile Include="Migrations\201505141946596_datatimefix.cs" />
+    <Compile Include="Migrations\201505141946596_datatimefix.Designer.cs">
+      <DependentUpon>201505141946596_datatimefix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505141951462_datenogenerate.cs" />
+    <Compile Include="Migrations\201505141951462_datenogenerate.Designer.cs">
+      <DependentUpon>201505141951462_datenogenerate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -292,8 +296,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505141544161_merge2K.resx">
-      <DependentUpon>201505141544161_merge2K.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505141946596_datatimefix.resx">
+      <DependentUpon>201505141946596_datatimefix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505141951462_datenogenerate.resx">
+      <DependentUpon>201505141951462_datenogenerate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

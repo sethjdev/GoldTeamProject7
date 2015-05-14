@@ -316,6 +316,7 @@
 </script>
 
 <div id="map_canvas" style="float:left;width:500px;height:500px;"></div>
+
 <div id="control_panel" style="float:right;width:30%;text-align:left;padding-top:20px">
     <div id="directions_panel" style="margin:20px;background-color:#FFEE77;"></div>
     <p class="">The central location is:</p>
@@ -323,4 +324,16 @@
     <div id="markerval"></div>
     </div>
 </div>
+
+@using (@Html.BeginForm("CreateMessage", "Products", FormMethod.Post)) 
+{ 
+    @Html.AntiForgeryToken()
+    
+    @Html.EditorFor(model => model.Message.Message, "", "Message", new { htmlAttributes = new { @class = "" } })
+    
+    @Html.Hidden("ProductID", Model.Product.ID)
+
+    <input type="submit" value="Create Message" />
+
+}
 

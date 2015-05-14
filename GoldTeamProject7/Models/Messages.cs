@@ -16,7 +16,6 @@ namespace GoldTeamProject7.Models
         
         public string Message { get; set; }
         
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateSent { get; set; }
         
         public int ProductID { get; set; }

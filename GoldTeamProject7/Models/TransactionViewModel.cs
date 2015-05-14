@@ -9,5 +9,6 @@ namespace GoldTeamProject7.Models
     {
         public ApplicationUser CurrentUser { get; set; }
         public Product Product { get; set; }
+        public Messages Message { get; set; }
     }
 }

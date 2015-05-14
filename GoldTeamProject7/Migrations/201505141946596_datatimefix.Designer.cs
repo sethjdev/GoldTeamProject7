@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class merge2K : IMigrationMetadata
+    public sealed partial class datatimefix : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(merge2K));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(datatimefix));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505141544161_merge2K"; }
+            get { return "201505141946596_datatimefix"; }
         }
         
         string IMigrationMetadata.Source
