@@ -1,8 +1,17 @@
-﻿@model IEnumerable<GoldTeamProject7.Models.Product>
+﻿
+
+@model PagedList.IPagedList<GoldTeamProject7.Models.Product>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 
 @{
     ViewBag.Title = "Home Page";
 }
+
+
+
+
 
 <div class="main-jumbotron">
     <div class="row">
@@ -38,3 +47,7 @@
     </div>
 </div>
 
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

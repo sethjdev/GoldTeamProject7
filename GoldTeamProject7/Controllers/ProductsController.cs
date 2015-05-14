@@ -14,6 +14,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.IO;
+using PagedList;
 
 namespace GoldTeamProject7.Controllers
 {
@@ -22,27 +23,47 @@ namespace GoldTeamProject7.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
-        public ActionResult Index(string searchString)
+
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "Title";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewBag.CategorySortParm = String.IsNullOrEmpty(sortOrder) ? "category_desc" : "Category";
+            
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else { searchString = currentFilter; }
+            ViewBag.CurrentFilter = searchString;
             var products = from p in db.Products
                            select p;
-
             if (!String.IsNullOrEmpty(searchString))
             {
-                //Created a new list object
-
-                //seperate each string in query and add to list
-                var splitSearchQuery = searchString.Split(' ');
-
-                //iterate over every item in list.
-                foreach (var item in splitSearchQuery)
-                {
-                    products = products.Where(p => p.Title.Contains(item));
-                }
+                products = products.Where(p => p.Title.ToUpper().Contains(searchString.ToUpper())
+                || p.Category.ToUpper().Contains(searchString.ToUpper()));
+            }
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    products = products.OrderByDescending(p => p.Title);
+                    break;
+                case "Price":
+                    products = products.OrderByDescending(p => p.Price);
+                    break;
+                case "category_desc":
+                    products = products.OrderByDescending(p => p.Category);
+                    break;
+                default: // Title ascending
+                    products = products.OrderBy(p => p.Title);
+                    break;
             }
 
-            return View(products);
+            int pageSize = 5; int pageNumber = (page ?? 1); return View(products.ToPagedList(pageNumber, pageSize));
+
         }
+    
 
         // GET: Products/Details/5
         public ActionResult Details(int? id)
@@ -86,6 +107,7 @@ namespace GoldTeamProject7.Controllers
 
                 using (var ms = new MemoryStream())
                 {
+                    if (ImageFile != null)
                     {
                         ImageFile.InputStream.CopyTo(ms);
                         product.MainPhoto = ms.ToArray();
@@ -157,6 +179,7 @@ namespace GoldTeamProject7.Controllers
             return RedirectToAction("Index");
         }
 
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -164,6 +187,13 @@ namespace GoldTeamProject7.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Transaction(int id) 
+        {
+            Product product = db.Products.Find(id);                        
+
+            return View(product);
         }
     }
 }
