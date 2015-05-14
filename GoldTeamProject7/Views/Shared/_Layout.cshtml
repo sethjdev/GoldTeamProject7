@@ -8,11 +8,13 @@
     <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,600,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.18&libraries=places&sensor=false"></script>
+    <script type="text/javascript" src="~/Scripts/gsmapextend.js"></script>
    
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body onload="initialize()">
     <div id="navigation-bar">
         <div class="row">
             <div class="columns large-3">
@@ -37,7 +39,7 @@
     <div style="height: 100px" ;width:100%"></div>
     <div class="container body-content">
         @RenderBody()
-        
+
         <footer>
             <div class="row">
                 <div class="large-12 columns">
