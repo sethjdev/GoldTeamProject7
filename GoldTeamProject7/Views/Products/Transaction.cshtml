@@ -1,62 +1,21 @@
-﻿@model GoldTeamProject7.Models.Product
-
-
+﻿@model GoldTeamProject7.Models.TransactionViewModel
+@using Microsoft.AspNet.Identity
 
 @{
     ViewBag.Title = "Transaction";
 }
 
+@Html.DisplayFor(model => model.Product.Title)
 
+@Html.DisplayFor(model => model.Product.Price)
 
-<h2>Transaction Page</h2>
+<img src="data:image;base64,@Convert.ToBase64String(Model.Product.MainPhoto)" />
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+@Html.DisplayFor(model => model.Product.ApplicationUser.FirstName)
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+@Html.DisplayFor(model => model.Product.ApplicationUser.Zipcode)
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+<img src="data:image;base64,@Convert.ToBase64String(Model.Product.ApplicationUser.ProfileImage)" />
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MainPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MainPhoto)
-                <img src="data:image;base64,@Convert.ToBase64String(Model.MainPhoto)" />
-</dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.Zipcode)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.Zipcode)
-        </dd>
-    </dl>
-</div>
-
-
-
-
+@Html.DisplayFor(model => model.CurrentUser.Zipcode)
 
