@@ -1,44 +1,40 @@
 ﻿@model GoldTeamProject7.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
+    
 }
-
-<h2>@ViewBag.Title.</h2>
-
-<p class="text-success">@ViewBag.StatusMessage</p>
-<div>
-    <h4>Change your account settings</h4>
-    <img src="data:image;base64,@Convert.ToBase64String(Model.ProfileImage)" />
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>Password:</dt>
-        <dd>
+<div class="row">
+    <img src="data:image;base64,@Convert.ToBase64String(Model.ProfileImage)" class="large-5 columns"  />
+    <div class="large-7 columns">
+        
+        <h4>
+            Your account settings
             [
-            @if (Model.HasPassword)
-            {
-                @Html.ActionLink("Change your password", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("Create", "SetPassword")
-            }
+            @Html.ActionLink("Change", "ChangeAccountSettings")
             ]
-        </dd>
-        <dt>External Logins:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
-        </dd>
-        @*
-            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
-             
-             See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
-             
-             Uncomment the following block after you have set up two-factor authentication
-        *@
-        @*  
-            <dt>Phone Number:</dt>
+        </h4>
+         <div>
+             <h5>First Name:</h5>   
+             @Model.FirstName             
+         </div>
+        <div>
+            <h5>Last Name:</h5>
+            @Model.LastName
+        </div>
+        <div>
+            <h5>Email:</h5>
+            @Model.Email
+        </div>
+        <div>
+            <h5>Zipcode:</h5>
+            @Model.Zipcode
+        </div>
+
+            
+            
+
+        <div>
+            <h5>Phone Number:</h5>
             <dd>
                 @(Model.PhoneNumber ?? "None") [
                 @if (Model.PhoneNumber != null)
@@ -53,33 +49,76 @@
                 }
                 ]
             </dd>
-        *@
-        <dt>Two-Factor Authentication:</dt>
-        <dd>
-            <p>
-                There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication.
-            </p>
-            @*@if (Model.TwoFactor)
+        </div>
+        
+        <div>
+            <h5>Password:</h5>
+            <dd>
+                [
+                @if (Model.HasPassword)
                 {
-                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Enabled
-                        <input type="submit" value="Disable" class="btn btn-link" />
-                        </text>
-                    }
+                    @Html.ActionLink("Change your password", "ChangePassword")
                 }
                 else
                 {
-                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Disabled
-                        <input type="submit" value="Enable" class="btn btn-link" />
-                        </text>
-                    }
-                }*@
-        </dd>
-    </dl>
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+            </dd>
+        </div>
+        <p class="text-success">@ViewBag.StatusMessage</p>
+            
+    </div>
 </div>
+
+<div class="row">
+    <div class="large-12 columns">
+
+        <h4>Your Products</h4>
+
+        @foreach (var item in Model.ApplicationUserProducts)
+        {
+            <table border="1">
+                <tr>
+                    <td><img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)"/></td>
+                    <td>@item.Title</td>
+                    <td>@item.Price</td>
+                    <td>@item.Category</td>
+                    
+                    @if (item.Availability == true)
+                    {
+                        <td>Available</td>
+                    }
+                    else
+                    {
+                        <td>Unavailable</td>
+                    }
+                    
+                    
+                </tr>                
+            </table>
+    <div>
+            @foreach(var message in Model.ProductMessages.Where(m => m.ProductID == item.ID))
+            { 
+                <div>
+                @message.DateSent
+                </div>
+                
+                foreach (var sender in Model.SenderTable.Where(s => s.Id == message.ApplicationUserID ))
+                {
+                    <div>
+                        @sender.UserName
+                    </div>
+                }
+                
+                <div>
+                @message.Message
+                </div>
+            }
+    </div>
+        }
+        <div>
+            @Model.MessagesBool
+        </div>
+        </div>
+    </div>

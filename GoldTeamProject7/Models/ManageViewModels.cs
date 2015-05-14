@@ -13,8 +13,22 @@ namespace GoldTeamProject7.Models
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
         public byte[] ProfileImage { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Zipcode { get; set; }
+        public string Email { get; set; }
+        public int oldMessages { get; set; }
+        
 
         public System.Linq.IQueryable<Product> Products { get; set; }
+
+        public IEnumerable<Product> ApplicationUserProducts { get; set; }
+
+        public IEnumerable<Messages> ProductMessages { get; set; }
+
+        public List<ApplicationUser> SenderTable { get; set; }
+
+        public bool MessagesBool { get; set; }
     }
     
     public class ManageLoginsViewModel
@@ -85,5 +99,24 @@ namespace GoldTeamProject7.Models
     {
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
+    }
+    public class AccountSettingsModel
+    {
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.PostalCode)]
+        public string Zipcode { get; set; }
+
+        [Required]
+        [Display(Name = "First Name")]       
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        [Required]
+        public string LastName { get; set; }
+
     }
 }

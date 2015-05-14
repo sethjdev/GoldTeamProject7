@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,14 +13,16 @@ namespace GoldTeamProject7.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }        
+        
         public string Message { get; set; }
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateSent { get; set; }
+        
         public int ProductID { get; set; }
-        public string RecipientID { get; set; }
 
-        //FK
+        public int TransactionID { get; set; }
+        
         public string ApplicationUserID { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
     }
 }

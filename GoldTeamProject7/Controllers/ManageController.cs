@@ -20,7 +20,7 @@ namespace GoldTeamProject7.Controllers
     public class ManageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -72,8 +72,27 @@ namespace GoldTeamProject7.Controllers
                 : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
-
+                       
             var userId = User.Identity.GetUserId();
+
+            var applicationUser = await UserManager.FindByIdAsync(userId);
+
+            var newMessages = 0;
+            var ApplicationUserProducts1 = (from p in db.Products
+                                            where p.ApplicationUserID == userId
+                                            select p).ToList();
+            var ProductMessages1 = (from m in db.Messages
+                                    select m).ToList();
+            foreach (var item in ApplicationUserProducts1)
+            {
+                foreach (var mess in ProductMessages1.Where(m => m.ProductID == item.ID))
+                {
+                    newMessages += 1;
+                }
+            }
+            var messagesBool = (applicationUser.oldMessages == newMessages) ? false : true;
+            applicationUser.oldMessages = newMessages;
+            UserManager.Update(applicationUser);
 
             var model = new IndexViewModel
             {
@@ -85,12 +104,31 @@ namespace GoldTeamProject7.Controllers
 
                 ProfileImage = (from m in db.Users
                                 where m.Id == userId
-                               select m.ProfileImage).FirstOrDefault()
+                               select m.ProfileImage).FirstOrDefault(),
+                ApplicationUserProducts = (from p in db.Products
+                                          where p.ApplicationUserID == userId
+                                          select p).ToList(),
+                Email = await UserManager.GetEmailAsync(userId),
+                FirstName =  applicationUser.FirstName,
+                LastName = applicationUser.LastName,
+                Zipcode = applicationUser.Zipcode,
+                ProductMessages = (from m in db.Messages
+                                  select m).ToList(),
+                SenderTable = (from u in db.Users
+                               where u.UserName == u.UserName
+                                   select u).ToList(),
+                MessagesBool = messagesBool
+                                                             
+            
             };
-
+            // add other logic here
+            //model.messagesBool = true;
+            
             return View(model);
         }
 
+
+        
         //
         // POST: /Manage/RemoveLogin
         [HttpPost]
@@ -346,6 +384,29 @@ namespace GoldTeamProject7.Controllers
 
             base.Dispose(disposing);
         }
+
+
+
+
+
+
+
+        //// GET: /Manage/ChangeAccountSettings
+        //public ActionResult ChangeAccountSettings()
+        //{
+        //    return View();
+        //}
+
+
+        ////
+        //// POST: /Manage/ChangeAccountSettings
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> ChangeAccountSettings(AccountSettingsModel model)
+        //{
+            
+        //}
+
 
 #region Helpers
         // Used for XSRF protection when adding external logins

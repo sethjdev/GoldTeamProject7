@@ -16,7 +16,7 @@ namespace GoldTeamProject7.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult>  Index()
         {
 
             var buyerProducts = from p in db.Products
@@ -25,14 +25,14 @@ namespace GoldTeamProject7.Controllers
 
             var buyerMessages = new List<Messages>();
             foreach (Product p in buyerProducts)
+            {
+                foreach (Messages m in db.Messages)
                 {
-                    foreach (Messages m in db.Messages)
-                        {
-                            buyerMessages.Add(m);
-                        }
+                    buyerMessages.Add(m);
                 }
+            }
 
-        
+
             return View(await db.Messages.ToListAsync());
         }
 
@@ -65,7 +65,7 @@ namespace GoldTeamProject7.Controllers
         public async Task<ActionResult> Create([Bind(Include = "ID,Message,DateSent,TransactionID")] Messages messages)
         {
             if (ModelState.IsValid)
-            {
+            {  
                 db.Messages.Add(messages);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -73,6 +73,17 @@ namespace GoldTeamProject7.Controllers
 
             return View(messages);
         }
+
+
+
+       
+       
+
+
+
+
+
+
 
         // GET: Messages/Edit/5
         public async Task<ActionResult> Edit(int? id)
