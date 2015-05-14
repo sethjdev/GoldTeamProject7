@@ -60,6 +60,7 @@ namespace GoldTeamProject7.Controllers
             }
             int pageSize = 5; int pageNumber = (page ?? 1); return View(products.ToPagedList(pageNumber, pageSize));
         }
+    
 
         // GET: Products/Details/5
         public ActionResult Details(int? id)
