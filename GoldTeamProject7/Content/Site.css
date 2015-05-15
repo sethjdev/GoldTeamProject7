@@ -9,6 +9,8 @@
     5. Footer
     6. Account Register
     7. Login View
+    8. Transaction
+    9. My Profile Page
 
 */
 
@@ -34,7 +36,9 @@
 
 body a,
 body p,
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+button,
+textarea, input {
     font-family: 'Dosis', sans-serif;
     margin: 0;
     padding: 0;
@@ -165,6 +169,21 @@ a {
 /*===================================
     HOMEPAGE
 =====================================*/
+
+.new-message-alert {
+    position: absolute;
+    z-index: 10;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    left: 1100px;
+    top: 25px;
+    display: none;
+}
+
+.new-message-alert a {
+    font-weight: bold;
+}
 
 .main-jumbotron {
     height: 500px;
@@ -448,8 +467,165 @@ ACCOUNT REGISTER
 }
 
 
+/************************************
+TRANSACTION
+**************************************/
+
+.trans-product-title {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.sold-by-title {
+    font-weight: 700;
+}
+
+.trans-profilepic {
+    border-radius: 50%;
+}
+
+.sold-by-name {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.trans-zipcode {
+    font-size: 1.4em;
+    margin-top: -10px;
+}
+
+    .trans-zipcode span {
+        font-weight: 600;
+    }
+
+.why-not,
+.why-not-sub {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.why-not-sub {
+    font-weight: normal;
+}
+
+.why-not {
+    margin-bottom: -30px;
+}
 
 
+.map {
+    height: 300px;
+    width: 100%;
+}
+
+.message-box {
+    width: 100%;
+    height: 250px;
+    border: none;
+    background-color: #f1f1f1;
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.message-header {
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.message-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+
+/************************************
+MY PROFILE PAGE
+**************************************/
+
+.product-table {
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.table-image {
+    width: 200px;
+    height: auto;
+}
+
+.message {
+    background-color: #fff;
+}
+
+.date-sent {
+    margin-top: 30px;
+}
+
+.sender-email {
+    font-size: 1.5em;
+}
+
+.message-content {
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.message-content p {
+    font-weight: bold;
+}
+
+.messages-wrap {
+    padding: 10px;
+}
+
+.product-table p {
+    font-weight: bold;
+}
+
+.products-header,
+.name-header {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+    .name-header {
+        margin-bottom: -20px;
+        margin-top: 20px;
+        font-size: 3em;
+    }
+
+.messages-wrap p {
+    text-align: center;
+}
+
+.my-info h6 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #00b4ff;
+}
+
+.my-info h5 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #333;
+}
+
+.my-info h5,
+.my-info h6 {
+    text-align: center;
+}
 
 
 
