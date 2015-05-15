@@ -9,10 +9,6 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{ ViewBag.Title = "Products";
 }
-<h2>Products</h2>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 
 <div class="row">
     <div class="large-12 columns">
@@ -30,21 +26,13 @@
                 </div>
             }
         </div>
+        <div style="height: 50px"></div>
     </div>
+    
+    @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of
+    @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
 </div>
-
-
-<p>
-    @using (Html.BeginForm())
-    {
-<p> Find by Title: @Html.TextBox("SearchString") <input type="submit" value="Search" /></p> 
-    }
-
-  
-
         
-
-@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of 
-@Model.PageCount
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
