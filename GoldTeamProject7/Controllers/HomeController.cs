@@ -32,5 +32,13 @@ namespace GoldTeamProject7.Controllers
           return View(products.ToPagedList(pageNumber, pageSize));
 
         }
+
+        [Authorize(Users="seth.johnson0126@gmail.com")]
+        public ActionResult AdminDashboard() 
+        { 
+        
+        
+            return View();
+        }
     }
 }

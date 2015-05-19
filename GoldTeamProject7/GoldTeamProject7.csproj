@@ -282,6 +282,7 @@
     <Content Include="Views\Messages\Edit.cshtml" />
     <Content Include="Views\Messages\Index.cshtml" />
     <Content Include="Views\Products\Transaction.cshtml" />
+    <Content Include="Views\Home\AdminDashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
