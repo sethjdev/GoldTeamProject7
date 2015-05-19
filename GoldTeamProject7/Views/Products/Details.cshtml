@@ -24,12 +24,15 @@
             <p class="seller-name">@Html.DisplayFor(model => model.ApplicationUser.FirstName)</p>
             <p class="detail-zipcode"><span>Zipcode:</span>@Html.DisplayFor(model => model.ApplicationUser.Zipcode)</p>
         </div>
+        <div style="height:30px;clear:both"></div>
+        <p class="seller-headline">Description:</p>
+        <p class="detail-desc">@Html.DisplayFor(model => model.Description)</p>
     </div>
 </div>
 
 <div class="row">
     <div class="large-7 columns">
-        <p class="detail-desc">@Html.DisplayFor(model => model.Description)</p>
+        <div style="height:20px;clear:both"></div>
         <p class="detail-category">@Html.DisplayFor(model => model.Category)</p>
     </div>
 </div>

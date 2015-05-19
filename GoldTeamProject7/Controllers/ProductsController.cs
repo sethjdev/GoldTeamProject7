@@ -116,7 +116,7 @@ namespace GoldTeamProject7.Controllers
                 }
 
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Redirect("/");
             }
 
             return View(product);
@@ -218,7 +218,7 @@ namespace GoldTeamProject7.Controllers
                 messages.DateSent = DateTime.Now;
 
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return Redirect("/");
             }
 
             return View(messages);

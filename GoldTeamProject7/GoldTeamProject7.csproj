@@ -185,16 +185,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505141946596_datatimefix.cs" />
-    <Compile Include="Migrations\201505141946596_datatimefix.Designer.cs">
-      <DependentUpon>201505141946596_datatimefix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505141951462_datenogenerate.cs" />
-    <Compile Include="Migrations\201505141951462_datenogenerate.Designer.cs">
-      <DependentUpon>201505141951462_datenogenerate.cs</DependentUpon>
+    <Compile Include="Migrations\201505190141047_fixInit.cs" />
+    <Compile Include="Migrations\201505190141047_fixInit.Designer.cs">
+      <DependentUpon>201505190141047_fixInit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Messages.cs" />
@@ -207,6 +204,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\img\between-logo.png" />
+    <Content Include="Content\img\jumbo-bg.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -296,11 +294,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505141946596_datatimefix.resx">
-      <DependentUpon>201505141946596_datatimefix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505141951462_datenogenerate.resx">
-      <DependentUpon>201505141951462_datenogenerate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505190141047_fixInit.resx">
+      <DependentUpon>201505190141047_fixInit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

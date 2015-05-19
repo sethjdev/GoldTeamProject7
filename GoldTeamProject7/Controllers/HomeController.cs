@@ -19,14 +19,14 @@ namespace GoldTeamProject7.Controllers
         {
             var products = from p in db.Products
                            where p.Availability == true
-                           orderby p.Title
+                           orderby p.UploadDate descending
                            select p;
 
-          var skip = 10;
-          var take = 10;
+          var skip = 12;
+          var take = 12;
           var query = products.Skip(skip).Take(take);
 
-          int pageSize = 10;
+          int pageSize = 12;
           int pageNumber = (page ?? 1);
          
           return View(products.ToPagedList(pageNumber, pageSize));

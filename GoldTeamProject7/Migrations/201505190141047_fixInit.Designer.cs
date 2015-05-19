@@ -7,13 +7,13 @@ namespace GoldTeamProject7.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class datatimefix : IMigrationMetadata
+    public sealed partial class fixInit : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(datatimefix));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fixInit));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505141946596_datatimefix"; }
+            get { return "201505190141047_fixInit"; }
         }
         
         string IMigrationMetadata.Source

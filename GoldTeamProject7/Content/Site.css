@@ -176,7 +176,7 @@ a {
     background-color: red;
     padding: 10px;
     border-radius: 5px;
-    left: 1100px;
+    left: 1200px;
     top: 25px;
     display: none;
 }
@@ -364,8 +364,9 @@ a {
 
 .seller-image img {
     width: 80px;
-    border-radius: 50%!important;
+    border-radius: 1000px;
     margin-right: 20px;
+    margin-top: 15px;
 }
 
 .seller-image img,
