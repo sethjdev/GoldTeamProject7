@@ -14,7 +14,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Net;
 
-namespace GoldTeamProject7.Controllers
+namespace GoldTeamProject7.Models
 {
     [Authorize]
     public class ManageController : Controller

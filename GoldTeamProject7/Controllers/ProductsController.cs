@@ -16,7 +16,7 @@ using System.Globalization;
 using System.IO;
 using PagedList;
 
-namespace GoldTeamProject7.Controllers
+namespace GoldTeamProject7.Models
 {
     public class ProductsController : Controller
     {
@@ -195,6 +195,7 @@ namespace GoldTeamProject7.Controllers
             var viewModel = new TransactionViewModel();
 
             viewModel.Product = db.Products.Find(id);
+
             var userId = User.Identity.GetUserId();
             viewModel.CurrentUser = (from p in db.Users
                                     where p.Id == userId

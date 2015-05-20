@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using GoldTeamProject7.Models;
 using PagedList;
 
-namespace GoldTeamProject7.Controllers
+namespace GoldTeamProject7.Models
 {
     public class HomeController : Controller
     {
@@ -35,10 +35,19 @@ namespace GoldTeamProject7.Controllers
 
         [Authorize(Users="seth.johnson0126@gmail.com")]
         public ActionResult AdminDashboard() 
-        { 
-        
-        
-            return View();
+        {
+            var model = new AdminViewModel
+            {
+                productList = (from p in db.Products
+                               select p).ToList(),
+                userList = (from u in db.Users
+                                select u).ToList(),
+                messageList = (from m in db.Messages
+                                select m).ToList()
+            };
+            
+
+            return View(model);
         }
     }
 }

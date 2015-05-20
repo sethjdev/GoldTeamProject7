@@ -9,7 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using GoldTeamProject7.Models;
 
-namespace GoldTeamProject7.Controllers
+namespace GoldTeamProject7.Models
 {
     public class MessagesController : Controller
     {

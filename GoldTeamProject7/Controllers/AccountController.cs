@@ -13,7 +13,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Net;
 
-namespace GoldTeamProject7.Controllers
+namespace GoldTeamProject7.Models
 {
     [Authorize]
     public class AccountController : Controller

@@ -1,9 +1,27 @@
-﻿@{
+﻿@model GoldTeamProject7.Models.AdminViewModel
+
+@{
     ViewBag.Title = "Admin Dashboard";
 }
 
 <div class="row">
-     <div class="large-6 columns">
-         
-     </div>
+    <div class="large-6 columns">
+        @foreach (var item in Model.productList)
+        {
+            @item.Title
+            @item.Price
+            @item.UploadDate
+            @item.ApplicationUserID
+        }
+    </div>
+    <div class="large-6 columns">
+        @foreach (var item in Model.userList)
+        {
+
+            @item.FirstName
+            @item.LastName
+            @item.UserName
+            @item.Zipcode
+        }
+    </div>
 </div>
