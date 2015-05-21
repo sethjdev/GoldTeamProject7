@@ -1,6 +1,4 @@
-﻿
-
-@model PagedList.IPagedList<GoldTeamProject7.Models.Product>
+﻿@model PagedList.IPagedList<GoldTeamProject7.Models.Product>
 @using PagedList.Mvc;
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
@@ -19,7 +17,15 @@
             <a href="/products/create" class="jumbotron-btn">Post an Item</a>
         </div>
         <div class="large-6 columns">
-            <a href="/account/register" class="jumbotron-btn">Get an Account</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="/manage" class="jumbotron-btn">View Profile</a>
+            }
+            else
+            {
+                <a href="/account/register" class="jumbotron-btn">Get an Account</a>
+            }
+            
         </div>
     </div>
 </div>
