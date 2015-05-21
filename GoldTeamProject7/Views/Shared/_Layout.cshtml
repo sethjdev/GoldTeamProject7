@@ -10,7 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,600,800' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.18&libraries=places&sensor=false"></script>
     <script type="text/javascript" src="~/Scripts/gsmapextend.js"></script>
-   
+
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -34,8 +34,13 @@
             <div class="columns large-5">
                 @Html.Partial("_LoginPartial")
             </div>
+
+            <div class="new-message-alert" id="msg-alrt"><a href="/Manage">NEW <span class="fa fa-envelope"></span></a></div>
+            @if (User.Identity.Name == "seth.johnson0126@gmail.com")
+            {
+                <a href="/home/admindashboard" class="admin-button">Admin Dashboard</a>
+            }
         </div>
-        <div class="new-message-alert" id="msg-alrt"><a href="/Manage">NEW <span class="fa fa-envelope"></span></a></div>
     </div>
     <div style="height: 100px" ;width:100%"></div>
     <div class="container body-content">
@@ -50,9 +55,10 @@
         </footer>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="~/Scripts/app.js"></script>
-        
+
         @Scripts.Render("~/bundles/bootstrap")
         <script src="~/Scripts/Masonry.js"></script>
         @RenderSection("scripts", required: false)
 </body>
 </html>
+
