@@ -11,6 +11,7 @@
     7. Login View
     8. Transaction
     9. My Profile Page
+    10. Admin Dashboard
 
 */
 
@@ -637,6 +638,44 @@ MY PROFILE PAGE
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
+
+/************************************
+              Admin Dashboard
+**************************************/
+
+.user-table {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0;
+    border-spacing: 0;
+    border-right: 1px solid #999;
+}
+
+    .user-table th {
+        background: linear-gradient(to bottom, #e8e8e8 0%,#c7c7c7 100%);
+        color: #333;
+        border: 1px solid #999;
+        border-right: none;
+
+    }
+
+    .user-table tr:nth-child(odd) {
+        background-color: #d7d7d7;
+    }
+
+    .user-table td {
+        border: 1px solid #999;
+        border-top: none;
+        border-right: none;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 10px;
+    }
+
+
 
 
 /************************************
