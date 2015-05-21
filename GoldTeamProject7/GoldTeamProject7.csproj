@@ -178,6 +178,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Migrations\201505210213586_deleteTransactionIdinProductModel.cs" />
+    <Compile Include="Migrations\201505210213586_deleteTransactionIdinProductModel.Designer.cs">
+      <DependentUpon>201505210213586_deleteTransactionIdinProductModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -298,6 +302,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505190141047_fixInit.resx">
       <DependentUpon>201505190141047_fixInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505210213586_deleteTransactionIdinProductModel.resx">
+      <DependentUpon>201505210213586_deleteTransactionIdinProductModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

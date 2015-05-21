@@ -6,6 +6,7 @@
 
 <div class="row">
     <div class="large-12 columns">
+        <h2 class="table-headline">Users:</h2>
         <table class="user-table" border="0">
             <tr>
                 <th>First Name</th>
@@ -20,6 +21,26 @@
                     <td>@item.LastName</td>
                     <td>@item.UserName</td>
                     <td>@item.Zipcode</td>
+                </tr>
+            }
+        </table>
+        <h2 class="table-headline">Products:</h2>
+        <table class="user-table" border="0">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Product Image</th>
+            </tr>
+            @foreach (var item in Model.productList)
+            {
+                <tr>
+                    <td><a href="/products/details/@item.ID">View</a></td>
+                    <td>@item.Title</td>
+                    <td>@item.Price</td>
+                    <td>@item.Category</td>
+                    <td><img src="data:image;base64,@Convert.ToBase64String(item.MainPhoto)" class="table-img"/></td>
                 </tr>
             }
         </table>

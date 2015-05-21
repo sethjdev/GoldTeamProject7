@@ -659,7 +659,6 @@ MY PROFILE PAGE
 
 .user-table {
     width: 100%;
-    margin-top: 50px;
     padding: 0;
     border-spacing: 0;
     border-right: 1px solid #999;
@@ -688,7 +687,19 @@ MY PROFILE PAGE
         padding: 10px;
     }
 
+.table-headline {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px
+}
 
+.table-img {
+   height: 100px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 
 /************************************
